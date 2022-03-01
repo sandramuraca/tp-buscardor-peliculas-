@@ -3,11 +3,28 @@ import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import { useSearchParams } from "react-router-dom";
+import { useEffect } from "react";
 
 
 const Buscador = () =>{
-  
-  const [serchParams, setSeacrhParams] = useSearchParams()
+
+
+const [searchParams, setSeacrhParams] = useSearchParams({
+    busquedaUsuario: ""
+  })
+
+useEffect(() =>{
+  //esta api se reemplaza con la de peliculas
+  fetch(`https://rickandmortyapi.com/api/character/?name=${searchParams.get("busquedaUsuario")}`)
+  .then(res => res.json())
+  .then(data => console.log(data))
+}, [searchParams])
+
+const handleChange = (e) =>{
+  setSeacrhParams({
+    busquedaUsuario : e.target.value
+  })
+}
 
     return (
 
@@ -18,7 +35,9 @@ const Buscador = () =>{
               id="standard-basic"
               label="Buscar película"
               variant="standard"
-              // onChange={escritoInput}
+              onChange={handleChange}
+              value={searchParams.get("busquedaUsuario")}
+
         />
 
 
@@ -30,7 +49,7 @@ const Buscador = () =>{
           >
             Buscar
           </Button>
-
+         
       </Box>
      
     )
