@@ -8,6 +8,8 @@ import UltimosLanzamientos from './componentes/UltimosLanzamientos';
 import Populares from './componentes/Populares';
 import Buscador from './componentes/Buscardor';
 
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 const App = () =>{
   return (
   

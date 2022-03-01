@@ -1,14 +1,19 @@
+import { Box } from '@mui/material';
 import Carrousel from './Carrousel';
 import Listados from './Listados';
 
 const Main = () =>{
     return (
-      <div>
-        <h3>Este el el main</h3>
-        <Carrousel/>
-        <Listados/>
+      
+        <Box sx={{ marginTop: 10 }}>
+          <h3>Este el el main</h3>
+          <Carrousel/>
+          <Listados/>
+        </Box>
         
-      </div>
+        
+     
+        
   
     )
   }

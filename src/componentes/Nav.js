@@ -10,8 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 const Nav = () =>{
     return (
-      <div>
-        
+              
         <Box sx={{ flexGrow: 1 }}>
           <AppBar 
           position="fixed"
@@ -48,13 +47,6 @@ const Nav = () =>{
           </AppBar>
         </Box>
         
-        <ul>
-            
-            <li></li>
-            <li> </li>
-        </ul>
-
-      </div>
   
     )
   }

@@ -1,12 +1,17 @@
 import Tarjeta from "./Tarjeta";
+import { Box } from "@mui/material";
+
 
 const Populares = () =>{
     return (
-      <div>
-        <h3>Aca van las cards de populares</h3>
+
+      <Box sx={{ marginTop: 10 }}>
+
+        <h3> Aca van las cards de populares</h3>
         <Tarjeta/>
-        
-      </div>
+      
+      </Box>
+      
   
     )
   }
