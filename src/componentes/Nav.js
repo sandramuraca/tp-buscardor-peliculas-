@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import TheatersIcon from '@mui/icons-material/Theaters';
 
 const Nav = () =>{
     return (
@@ -14,9 +14,9 @@ const Nav = () =>{
         <Box sx={{ flexGrow: 1 }}>
           <AppBar 
           position="fixed"
-          sx={{ bgcolor: "red"}}>
+          sx={{ bgcolor: "#5865f2"}}>
             <Toolbar>
-              <IconButton
+              <TheatersIcon
                 size="large"
                 edge="start"
                 color="inherit"
@@ -24,24 +24,24 @@ const Nav = () =>{
                 sx={{ mr: 2 }}
               >
               <MenuIcon />
-              </IconButton>
+              </TheatersIcon>
               <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
                 Buscador Películas
               </Typography>
               <Button color="inherit">
-                <Link to="/"> Home </Link>
+                <Link to="/"  style={{ textDecoration: "none", color: "white" }}> Home </Link>
               </Button>
                  
               <Button>
-                <Link to="/ultimos-lanzamientos">Ultimos Lanzamientos</Link>
+                <Link to="/ultimos-lanzamientos"  style={{ textDecoration: "none", color: "white" }}>Ultimos Lanzamientos</Link>
               </Button> 
 
               <Button>
-                <Link to="/populares">Populares </Link>
+                <Link to="/populares"  style={{ textDecoration: "none", color: "white" }}>Populares </Link>
               </Button>
 
               <Button>
-              <Link to="/buscar">Buscar</Link>
+              <Link to="/buscar"  style={{ textDecoration: "none", color: "white" }}>Buscar</Link>
               </Button>
             </Toolbar>
           </AppBar>
