@@ -8,13 +8,10 @@ const Main = () =>{
         <Box sx={{ marginTop: 10 }}>
           <h3>Este el el main</h3>
           <Carrousel/>
-          <Listados/>
+          <Listados titulo="Películas Populares" url="popular" />
+          <Listados titulo="Películas Mejor Puntuadas" url="top_rated"/>
         </Box>
         
-        
-     
-        
-  
     )
   }
   
