@@ -13,8 +13,7 @@ import Avatar from '@mui/material/Avatar';
 const ItemListadoPelicula = ({titulo, imagen, link}) =>{
     return (
         <Box>
-            <List sx={{ width: '100%', 
-                        maxWidth: 360, 
+            <List sx={{ width: '110%', 
                         bgcolor: 'background.paper' }}>
                 <ListItem alignItems="flex-start">
                     <ListItemAvatar>
