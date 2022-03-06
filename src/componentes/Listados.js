@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import ItemListadoPelicula from './ItemListadoPelicula';
 import Typography from '@mui/material/Typography';
 
-const Listados = ({titulo, urlListado}) =>{
+const Listados = ({titulo, urlListado}) => {
 
   const [peliculas, setPeliculas] = useState([])
   useEffect (() => {
@@ -13,12 +13,21 @@ const Listados = ({titulo, urlListado}) =>{
   }, [])
     return (
       <Box>
-        <Typography sx={{ color: "#5865f2"}} 
+        <Box sx={{ bgcolor:"#5865f2",
+                   height: 70,
+                   display: "flex",
+                   alignItems: "center", 
+                   justifyContent: "center",
+                   width: '110%',
+                   borderRadius: 1}}>
+        <Typography sx={{ bgcolor:"#5865f2",
+                           color: "white"}} 
         variant="h4" 
         gutterBottom component="div">
         {titulo}
         </Typography>
-        <h2></h2>
+        </Box>
+
         {peliculas.map(pelicula => (
           <ItemListadoPelicula 
           key={pelicula.id}

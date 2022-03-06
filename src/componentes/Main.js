@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import Carrousel from './Carrousel';
 import Listados from './Listados';
 
-const Main = () =>{
+const Main = () => {
     return (
       
       <Box sx={{marginTop: 10}}>

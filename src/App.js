@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Nav from './componentes/Nav';
@@ -10,7 +9,7 @@ import Buscador from './componentes/Buscardor';
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
-const App = () =>{
+const App = () => {
   return (
     <BrowserRouter>
         <Nav/>

@@ -1,18 +1,21 @@
-import Tarjeta from "./Tarjeta";
 import { Box } from "@mui/material";
+import EstructuraPeliculasNuevasYPopulares from "./EstructuraPeliculasNuevasYPolulares"
+import { useState, useEffect } from "react";
 
+const Populares = () => {
+  const [peliculas, setPeliculas] = useState([])
+  useEffect (() => {
+    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=1e2f4ae9cf56f3e1c8367fb458677972&language=es-AR&page=1`)
+    .then(res => res.json())
+    .then(data => setPeliculas(data.results))
+  }, [])
 
-const Populares = () =>{
     return (
-
       <Box sx={{ marginTop: 10 }}>
-
-        <h3> Aca van las cards de populares</h3>
-        <Tarjeta/>
-      
+        <EstructuraPeliculasNuevasYPopulares
+          titulo="Películas Populares"
+          Peliculas={peliculas}/>
       </Box>
-      
-  
     )
   }
   
