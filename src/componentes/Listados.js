@@ -33,7 +33,7 @@ const Listados = ({titulo, urlListado}) => {
           key={pelicula.id}
           titulo={pelicula.title}
           imagen={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
-          link={`/detallePelicula/${peliculas.id}`}/>
+          link={`/detallePelicula/${pelicula.id}`}/>
         ) )}
       </Box>
   

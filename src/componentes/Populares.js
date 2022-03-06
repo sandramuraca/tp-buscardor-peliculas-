@@ -14,7 +14,7 @@ const Populares = () => {
       <Box sx={{ marginTop: 10 }}>
         <EstructuraPeliculasNuevasYPopulares
           titulo="Películas Populares"
-          Peliculas={peliculas}/>
+          peliculas={peliculas}/>
       </Box>
     )
   }
