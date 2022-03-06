@@ -1,7 +1,7 @@
 const DetallePelicula = () =>{
     return (
       <div>
-        <h3>aca va la tarjeta del detalle de la pelicula</h3>
+        <h3>aca va el detalle de la pelicula</h3>
         
       </div>
   

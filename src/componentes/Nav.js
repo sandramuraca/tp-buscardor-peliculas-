@@ -4,9 +4,9 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import TheatersIcon from '@mui/icons-material/Theaters';
+import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 
 const Nav = () =>{
     return (
@@ -16,7 +16,7 @@ const Nav = () =>{
           position="fixed"
           sx={{ bgcolor: "#5865f2"}}>
             <Toolbar>
-              <TheatersIcon
+              <LocalActivityIcon
                 size="large"
                 edge="start"
                 color="inherit"
@@ -24,7 +24,7 @@ const Nav = () =>{
                 sx={{ mr: 2 }}
               >
               <MenuIcon />
-              </TheatersIcon>
+              </LocalActivityIcon>
               <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
                 Buscador Películas
               </Typography>

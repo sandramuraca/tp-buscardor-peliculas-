@@ -12,32 +12,23 @@ import Buscador from './componentes/Buscardor';
 
 const App = () =>{
   return (
-  
-
-      <BrowserRouter>
+    <BrowserRouter>
         <Nav/>
-      
-
           <Routes>
-
-          <Route path="/" element={<Main />} />
-          <Route path="/ultimos-lanzamientos" element={<UltimosLanzamientos />} 
-          />
-          <Route path="/populares" element={<Populares />} 
-          />
-          <Route path="/buscar" element={<Buscador />} 
-          />
-          
-          <Route path="/detalle-pelicula/:idPelicula" element={<Buscador />} 
-          />
-
-        </Routes>
-         
-       <Footer/>
-
-      </BrowserRouter>
-
-
+            <Route path="/" 
+                   element={<Main />} />
+            <Route path="/ultimos-lanzamientos" 
+                   element={<UltimosLanzamientos />} />
+            <Route path="/populares" 
+                   element={<Populares />} />
+            <Route path="/buscar" 
+                   element={<Buscador />} 
+            />
+            <Route path="/detalle-pelicula/:idPelicula" 
+                   element={<Buscador />} />
+          </Routes>
+        <Footer/>
+    </BrowserRouter>
   )
 }
 

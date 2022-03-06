@@ -5,9 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
 
-
 const Buscador = () =>{
-
 
 const [searchParams, setSeacrhParams] = useSearchParams({
     busquedaUsuario: ""
@@ -22,25 +20,19 @@ useEffect(() =>{
 
 const handleChange = (e) =>{
   setSeacrhParams({
-    busquedaUsuario : e.target.value
+    busquedaUsuario: e.target.value
   })
 }
-
     return (
-
       <Box sx={{ marginTop: 10 }}>
-       
-           <TextField
+                  <TextField
               sx={{ width: 400 }}
               id="standard-basic"
               label="Buscar película"
               variant="standard"
               onChange={handleChange}
               value={searchParams.get("busquedaUsuario")}
-
         />
-
-
           <Button
             margin="normal"
             variant="outline"
@@ -49,7 +41,6 @@ const handleChange = (e) =>{
           >
             Buscar
           </Button>
-         
       </Box>
      
     )
