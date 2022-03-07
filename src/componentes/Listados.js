@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Box } from "@mui/system";
 import ItemListadoPelicula from './ItemListadoPelicula';
 import Typography from '@mui/material/Typography';
+import { colorPrimario } from "./auxiliares/Auxiliares";
 
 const Listados = ({titulo, urlListado}) => {
 
@@ -13,14 +14,14 @@ const Listados = ({titulo, urlListado}) => {
   }, [])
     return (
       <Box>
-        <Box sx={{ bgcolor:"#5865f2",
+        <Box sx={{ bgcolor: {colorPrimario},
                    height: 70,
                    display: "flex",
                    alignItems: "center", 
                    justifyContent: "center",
                    width: '110%',
                    borderRadius: 1}}>
-        <Typography sx={{ bgcolor:"#5865f2",
+        <Typography sx={{ bgcolor: {colorPrimario},
                            color: "white"}} 
         variant="h4" 
         gutterBottom component="div">
