@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Box } from "@mui/system";
 import ItemListadoPelicula from './ItemListadoPelicula';
 import Typography from '@mui/material/Typography';
-import { colorPrimario } from "./auxiliares/Auxiliares";
+import { colorPrimario } from "../auxiliares/Auxiliares";
 
 const Listados = ({titulo, urlListado}) => {
 

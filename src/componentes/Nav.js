@@ -13,7 +13,7 @@ const Nav = () =>{
         <Box sx={{ flexGrow: 1 }}>
           <AppBar 
           position="fixed"
-          sx={{ bgcolor: "#5865f2"}}>
+          sx={{ bgcolor: "#94b0da"}}>
             <Toolbar>
               <LocalActivityIcon
                 size="large"
