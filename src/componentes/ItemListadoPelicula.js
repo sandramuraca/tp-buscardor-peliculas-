@@ -8,7 +8,7 @@ import Divider from '@mui/material/Divider';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
-
+import { colorPrimario } from "../auxiliares/Auxiliares";
 
 const ItemListadoPelicula = ({titulo, imagen, link}) =>{
     return (
@@ -21,7 +21,8 @@ const ItemListadoPelicula = ({titulo, imagen, link}) =>{
                     </ListItemAvatar>
                     <ListItemText
                     primary={titulo} />
-                    <Link to={link}>
+                    <Link to={link}
+                    sx={{ style: colorPrimario}}>
                         <RemoveRedEyeIcon/>
                     </Link>
                 </ListItem>

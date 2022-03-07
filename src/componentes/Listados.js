@@ -14,14 +14,14 @@ const Listados = ({titulo, urlListado}) => {
   }, [])
     return (
       <Box>
-        <Box sx={{ bgcolor: {colorPrimario},
+        <Box sx={{ bgcolor: colorPrimario,
                    height: 70,
                    display: "flex",
                    alignItems: "center", 
                    justifyContent: "center",
                    width: '110%',
                    borderRadius: 1}}>
-        <Typography sx={{ bgcolor: {colorPrimario},
+        <Typography sx={{ bgcolor: colorPrimario,
                            color: "white"}} 
         variant="h4" 
         gutterBottom component="div">
