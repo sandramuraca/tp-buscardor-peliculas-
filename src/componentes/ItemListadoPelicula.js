@@ -14,8 +14,7 @@ import { IconButton } from '@mui/material';
 const ItemListadoPelicula = ({titulo, imagen, link}) =>{
     return (
         <Box>
-            <List sx={{ width: '110%', 
-                        bgcolor: 'background.paper' }}>
+            <List sx={{ bgcolor: 'background.paper', width: "450px" }}>
                 <ListItem alignItems="flex-start">
                     <ListItemAvatar>
                         <Avatar alt="poster pelicula" src={imagen} />
