@@ -2,25 +2,26 @@ import { useState, useEffect } from "react";
 import { Box } from "@mui/system";
 import ItemListadoPelicula from './ItemListadoPelicula';
 import Typography from '@mui/material/Typography';
+import { colorPrimario, baseUrl, apiKey } from "../auxiliares/Auxiliares";
 
 const Listados = ({titulo, urlListado}) => {
 
   const [peliculas, setPeliculas] = useState([])
   useEffect (() => {
-    fetch(`https://api.themoviedb.org/3/movie/${urlListado}?api_key=1e2f4ae9cf56f3e1c8367fb458677972&language=es-AR&page=1`)
+    fetch(`${baseUrl}${urlListado}?api_key=${apiKey}&language=es-AR&page=1`)
     .then(res => res.json())
     .then(data => setPeliculas(data.results))
   }, [])
     return (
       <Box>
-        <Box sx={{ bgcolor:"#5865f2",
+        <Box sx={{ bgcolor: colorPrimario,
                    height: 70,
                    display: "flex",
                    alignItems: "center", 
                    justifyContent: "center",
                    width: '110%',
                    borderRadius: 1}}>
-        <Typography sx={{ bgcolor:"#5865f2",
+        <Typography sx={{ bgcolor: colorPrimario,
                            color: "white"}} 
         variant="h4" 
         gutterBottom component="div">

@@ -5,8 +5,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
-import TheatersIcon from '@mui/icons-material/Theaters';
 import LocalActivityIcon from '@mui/icons-material/LocalActivity';
+import { colorPrimario } from "../auxiliares/Auxiliares";
 
 const Nav = () =>{
     return (
@@ -14,7 +14,7 @@ const Nav = () =>{
         <Box sx={{ flexGrow: 1 }}>
           <AppBar 
           position="fixed"
-          sx={{ bgcolor: "#5865f2"}}>
+          sx={{ bgcolor: colorPrimario }}>
             <Toolbar>
               <LocalActivityIcon
                 size="large"
