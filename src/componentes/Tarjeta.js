@@ -1,8 +1,8 @@
-const Tarjeta = () =>{
+const Tarjeta = ( ) =>{
     return (
       <div>
-        <h3>Soy una tarjeta</h3>
-        
+        <h3>soy una tarjeta</h3>
+              
       </div>
   
     )

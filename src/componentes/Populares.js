@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import EstructuraPeliculasNuevasYPopulares from "./EstructuraPeliculasNuevasYPolulares"
 import { useState, useEffect } from "react";
+import Tarjeta from "./Tarjeta";
 
 const Populares = () => {
   const [peliculas, setPeliculas] = useState([])
@@ -14,7 +15,9 @@ const Populares = () => {
       <Box sx={{ marginTop: 10 }}>
         <EstructuraPeliculasNuevasYPopulares
           titulo="Películas Populares"
-          peliculas={peliculas}/>
+          peliculas={peliculas}
+        />
+        
       </Box>
     )
   }
