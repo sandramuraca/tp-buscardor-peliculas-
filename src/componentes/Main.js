@@ -9,7 +9,7 @@ const Main = () => {
         <h3>Este el el main</h3>
         <Carrousel/>
            <Box sx={{display: "flex",
-                    justifyContent: "space-between",
+                    justifyContent: "space-around",
                     padding: 20 }}>
           <Listados titulo="Películas Populares" 
                     urlListado="popular" />

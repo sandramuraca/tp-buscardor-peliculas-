@@ -13,13 +13,13 @@ const Listados = ({titulo, urlListado}) => {
     .then(data => setPeliculas(data.results))
   }, [])
     return (
-      <Box>
+      <Box sx={{ height: "450px",
+      overflowY: "scroll", borderBottom: `1px ${colorPrimario} solid`}}>
         <Box sx={{ bgcolor: colorPrimario,
                    height: 70,
                    display: "flex",
                    alignItems: "center", 
                    justifyContent: "center",
-                   width: '110%',
                    borderRadius: 1}}>
         <Typography sx={{ bgcolor: colorPrimario,
                            color: "white"}} 
