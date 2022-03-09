@@ -11,9 +11,9 @@ const Main = () => {
            <Box sx={{display: "flex",
                     justifyContent: "space-around",
                     padding: 20 }}>
-          <Listados titulo="Películas Populares" 
+          <Listados tituloListado="Películas Populares" 
                     urlListado="popular" />
-          <Listados titulo="Películas Mejor Puntuadas" 
+          <Listados tituloListado="Películas Mejor Puntuadas" 
                     urlListado="top_rated"/>
         </Box>
       </Box>

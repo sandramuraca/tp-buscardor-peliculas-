@@ -11,17 +11,19 @@ import Avatar from '@mui/material/Avatar';
 import { colorPrimario } from "../auxiliares/Auxiliares";
 import { IconButton } from '@mui/material';
 
-const ItemListadoPelicula = ({titulo, imagen, link}) =>{
+//Las props de este comonente estan definidas en el map que estoy haciendo en el componente "Listados", alli le estoy pasando los valores
+
+const ItemListadoPelicula = ({tituloItem, imagenItem, linkIcono}) =>{
     return (
         <Box>
             <List sx={{ bgcolor: 'background.paper', width: "450px" }}>
                 <ListItem alignItems="flex-start">
                     <ListItemAvatar>
-                        <Avatar alt="poster pelicula" src={imagen} />
+                        <Avatar alt="poster pelicula" src={imagenItem} />
                     </ListItemAvatar>
                     <ListItemText
-                    primary={titulo} />
-                    <Link to={link}>
+                    primary={tituloItem} />
+                    <Link to={linkIcono}>
                         <IconButton style={{color: colorPrimario }}>
                             <RemoveRedEyeIcon/>
                         </IconButton>
