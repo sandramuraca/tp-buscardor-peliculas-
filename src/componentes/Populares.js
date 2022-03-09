@@ -1,12 +1,12 @@
 import { Box } from "@mui/material";
 import EstructuraPeliculasNuevasYPopulares from "./EstructuraPeliculasNuevasYPolulares"
 import { useState, useEffect } from "react";
-import Tarjeta from "./Tarjeta";
+import { baseUrl, apiKey } from "../auxiliares/Auxiliares";
 
 const Populares = () => {
   const [peliculas, setPeliculas] = useState([])
   useEffect (() => {
-    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=1e2f4ae9cf56f3e1c8367fb458677972&language=es-AR&page=1`)
+    fetch(`${baseUrl}popular?api_key=${apiKey}&language=es-AR&page=1`)
     .then(res => res.json())
     .then(data => setPeliculas(data.results))
   }, [])
@@ -14,11 +14,10 @@ const Populares = () => {
     return (
       <Box sx={{ marginTop: 10 }}>
         <EstructuraPeliculasNuevasYPopulares
-          titulo="Películas Populares"
+          tituloSeccion="Películas Populares"
           peliculas={peliculas}
         />
-        
-      </Box>
+        </Box>
     )
   }
   

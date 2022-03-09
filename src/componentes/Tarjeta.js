@@ -1,8 +1,11 @@
-const Tarjeta = ( ) =>{
+const Tarjeta = ( tituloTarjeta, imagenTarjeta, linkTarjeta ) =>{
     return (
       <div>
-        <h3>soy una tarjeta</h3>
-              
+        {/* <h3>{tituloTarjeta}</h3>
+        <img src={imagenTarjeta}/>
+        <a href={linkTarjeta}>{">"}</a> */}
+        <h3>Soy una tarjeta</h3>
+
       </div>
   
     )
