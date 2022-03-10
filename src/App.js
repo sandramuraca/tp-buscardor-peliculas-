@@ -6,6 +6,7 @@ import Footer from './componentes/Footer';
 import UltimosLanzamientos from './componentes/UltimosLanzamientos';
 import Populares from './componentes/Populares';
 import Buscador from './componentes/Buscardor';
+import DetallePelicula from './componentes/DetallePelicula';
 
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -24,7 +25,7 @@ const App = () => {
                    element={<Buscador />} 
             />
             <Route path="/detalle-pelicula/:idPelicula" 
-                   element={<Buscador />} />
+                   element={<DetallePelicula />} />
           </Routes>
         <Footer/>
     </BrowserRouter>
