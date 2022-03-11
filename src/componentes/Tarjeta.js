@@ -4,9 +4,7 @@ const Tarjeta = ( {tituloTarjeta, imagenTarjeta, linkTarjeta} ) =>{
         <h3>{tituloTarjeta}</h3>
         <img src={imagenTarjeta}/>
         <a href={linkTarjeta}>{">"}</a>
-       
       </div>
-  
     )
   }
   
