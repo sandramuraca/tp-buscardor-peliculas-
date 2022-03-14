@@ -1,43 +1,36 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Button } from "@mui/material";
-
+import { useEffect, useState } from "react";
+import {  baseUrl, apiKey } from "../auxiliares/Auxiliares";
+import ItemCarrousel from "./ItemCarrousel";
 
 const Carrousel = () => {
-  var items = [
-    {
-      name: "Random Name #1",
-      description: "Probably the most random thing you have ever seen!",
-    },
-    {
-      name: "Random Name #2",
-      description: "hello world",
-    },
-    {
-      name: "Random Name #3",
-      description: "lalala",
-    },
-  ];
+  
+  const [peliculas, setPeliculas] = useState([])
+  useEffect (() => {
+    fetch(`${baseUrl}now_playing?api_key=${apiKey}&language=es-AR&page=1`)
+    .then(res => res.json())
+    .then(data => setPeliculas(data.results))
+  }, [])
+
   return (
-    
-    <Carousel>
-      {items.map((item, i) => (
-        <Item key={i} item={item} />
+    <Carousel
+    animation="slide"
+    duration="800"
+    >
+      {peliculas.map((pelicula) => (
+        <ItemCarrousel
+        key={pelicula.id}
+        tituloSlider={pelicula.title}
+        imagenSlider={`url(https://image.tmdb.org/t/p/original/${pelicula.poster_path}
+        `}
+        descripcionSlider={pelicula.overview}
+        />
       ))}
     </Carousel>
   );
 };
 
-
-function Item(props) {
-  return (
-    <Paper>
-      <h2>{props.item.name}</h2>
-      <p>{props.item.description}</p>
-
-      <Button className="CheckButton">Check it out!</Button>
-    </Paper>
-  );
-}
 
 export default Carrousel;
