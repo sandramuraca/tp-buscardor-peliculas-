@@ -6,7 +6,7 @@ const Main = () => {
     return (
       
       <Box sx={{marginTop: 10}}>
-        <h3>Este el el main</h3>
+    
         <Carrousel/>
            <Box sx={{display: "flex",
                     justifyContent: "space-around",
