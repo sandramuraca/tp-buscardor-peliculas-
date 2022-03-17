@@ -1,24 +1,24 @@
 import { Box } from "@mui/system";
-import EstructuraPeliculasNuevasYPopulares from "./EstructuraPeliculasNuevasYPolulares"
+import EstructuraPeliculasNuevasYPopulares from "./EstructuraPeliculasNuevasYPolulares";
 import { useState, useEffect } from "react";
-import {  baseUrl, apiKey } from "../auxiliares/Auxiliares";
+import { baseUrl, apiKey } from "../auxiliares/Auxiliares";
 
 const UltimosLanzamientos = () => {
-  const [peliculas, setPeliculas] = useState([])
-  useEffect (() => {
+  const [peliculas, setPeliculas] = useState([]);
+  useEffect(() => {
     fetch(`${baseUrl}now_playing?api_key=${apiKey}&language=es-AR&page=1`)
-    .then(res => res.json())
-    .then(data => setPeliculas(data.results))
-  }, [])
+      .then((res) => res.json())
+      .then((data) => setPeliculas(data.results));
+  }, []);
 
-    return (
-      <Box sx={{ marginTop: 10 }}>
-        <EstructuraPeliculasNuevasYPopulares
-          tituloSeccion="Ultimos Lanzamientos"
-          peliculas={peliculas}/>
-      </Box>
-         
-    )
-  }
-  
-  export default UltimosLanzamientos;
+  return (
+    <Box sx={{ marginTop: 10 }}>
+      <EstructuraPeliculasNuevasYPopulares
+        tituloSeccion="Ultimos Lanzamientos"
+        peliculas={peliculas}
+      />
+    </Box>
+  );
+};
+
+export default UltimosLanzamientos;
