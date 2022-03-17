@@ -5,12 +5,12 @@ import Listados from './Listados';
 const Main = () => {
     return (
       
-      <Box sx={{marginTop: 10}}>
+      <Box sx={{marginTop: 5}}>
     
         <Carrousel/>
            <Box sx={{display: "flex",
                     justifyContent: "space-around",
-                    padding: 20 }}>
+                    padding: 5 }}>
           <Listados tituloListado="Películas Populares" 
                     urlListado="popular" />
           <Listados tituloListado="Películas Mejor Puntuadas" 
