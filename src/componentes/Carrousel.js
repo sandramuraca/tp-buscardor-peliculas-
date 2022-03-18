@@ -23,7 +23,7 @@ const Carrousel = () => {
         <ItemCarrousel
         key={pelicula.id}
         tituloSlider={pelicula.title}
-        imagenSlider={`https://image.tmdb.org/t/p/original/${pelicula.poster_path}
+        imagenSlider={`https://image.tmdb.org/t/p/original/${pelicula.backdrop_path}
         `}
         descripcionSlider={pelicula.overview}
         />

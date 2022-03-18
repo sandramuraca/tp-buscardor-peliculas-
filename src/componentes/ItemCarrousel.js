@@ -11,7 +11,7 @@ const ItemCarrousel = ({ tituloSlider, imagenSlider, descripcionSlider }) => {
         width: "100%",
         height: "500px",
         backgroundSize: "cover",
-        backgroundPosition: "50% 0%",
+        backgroundPosition: "50% 30%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
