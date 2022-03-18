@@ -13,7 +13,7 @@ const UltimosLanzamientos = () => {
 
   return (
     <Box sx={{ marginTop: 10 }}>
-      <EstructuraPeliculasNuevasYPopulares
+      <EstructuraPeliculasNuevasYPopulares 
         tituloSeccion="Ultimos Lanzamientos"
         peliculas={peliculas}
       />
