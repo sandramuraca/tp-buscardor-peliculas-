@@ -5,7 +5,6 @@ import { Button } from "@mui/material";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import Typography from "@mui/material/Typography";
-import { paginaActual } from "../auxiliares/Auxiliares";
 
 const EstructuraPeliculasNuevasYPopulares = ({
   tituloSeccion,
