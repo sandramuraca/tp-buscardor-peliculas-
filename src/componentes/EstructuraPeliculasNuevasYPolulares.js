@@ -7,7 +7,13 @@ import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutl
 import Typography from "@mui/material/Typography";
 import { paginaActual } from "../auxiliares/Auxiliares";
 
-const EstructuraPeliculasNuevasYPopulares = ({ tituloSeccion, peliculas, clickBotonPagSiguiente,clickBotonPagAnterior, pagina }) => {
+const EstructuraPeliculasNuevasYPopulares = ({
+  tituloSeccion,
+  peliculas,
+  clickBotonPagSiguiente,
+  clickBotonPagAnterior,
+  pagina,
+}) => {
   return (
     <Box
       sx={{

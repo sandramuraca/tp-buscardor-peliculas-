@@ -8,22 +8,24 @@ const UltimosLanzamientos = () => {
   const [pagina, setPagina] = useState(1);
 
   useEffect(() => {
-    fetch(`${baseUrl}now_playing?api_key=${apiKey}&language=es-AR&page=${paginaActual}`)
+    fetch(
+      `${baseUrl}now_playing?api_key=${apiKey}&language=es-AR&page=${paginaActual}`
+    )
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
   }, [pagina]);
 
-  const handleClickSiguiente =() =>{
-    setPagina(paginaActual++) 
-  }
+  const handleClickSiguiente = () => {
+    setPagina(paginaActual++);
+  };
 
-  const handleClickAnterior = () =>{
-    setPagina(paginaActual--) 
-  }
-  
+  const handleClickAnterior = () => {
+    setPagina(paginaActual--);
+  };
+
   return (
     <Box sx={{ marginTop: 10 }}>
-      <EstructuraPeliculasNuevasYPopulares 
+      <EstructuraPeliculasNuevasYPopulares
         tituloSeccion="Ultimos Lanzamientos"
         peliculas={peliculas}
         clickBotonPagSiguiente={handleClickSiguiente}
