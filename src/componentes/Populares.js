@@ -9,18 +9,18 @@ const Populares = () => {
 
   useEffect(() => {
     fetch(
-      `${baseUrl}popular?api_key=${apiKey}&language=es-AR&page=${paginaActual}`
+      `${baseUrl}popular?api_key=${apiKey}&language=es-AR&page=${pagina}`
     )
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
   }, [pagina]);
 
   const handleClickSiguiente = () => {
-    setPagina(paginaActual++);
+    setPagina(pagina + 1);
   };
 
   const handleClickAnterior = () => {
-    setPagina(paginaActual--);
+    setPagina(pagina - 1);
   };
   return (
     <Box sx={{ marginTop: 10 }}>
