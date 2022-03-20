@@ -58,7 +58,7 @@ const EstructuraPeliculasNuevasYPopulares = ({
           Página Anterior
         </Button>
         <Typography variant="h5" gutterBottom component="div" sx={{ m: 2 }}>
-          Pagina {paginaActual}
+          Pagina {pagina}
         </Typography>
         <Button
           variant="contained"
