@@ -5,6 +5,7 @@ import { Button } from "@mui/material";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import Typography from "@mui/material/Typography";
+import DetallePelicula from "./DetallePelicula";
 
 const EstructuraPeliculasNuevasYPopulares = ({
   tituloSeccion,
@@ -68,6 +69,7 @@ const EstructuraPeliculasNuevasYPopulares = ({
           Página Siguiente
         </Button>
       </Box>
+      <DetallePelicula sx={{m:5}}/>
     </Box>
   );
 };

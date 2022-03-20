@@ -1,3 +1,7 @@
+
+
+
+
 const DetallePelicula = () => {
   return (
     <div>
