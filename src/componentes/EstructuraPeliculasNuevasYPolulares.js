@@ -1,10 +1,19 @@
 import { Box } from "@mui/material";
 import Tarjeta from "./Tarjeta";
 import * as React from "react";
-import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
+import { Button } from "@mui/material";
+import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
+import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
+import Typography from "@mui/material/Typography";
+import { paginaActual } from "../auxiliares/Auxiliares";
 
-const EstructuraPeliculasNuevasYPopulares = ({ tituloSeccion, peliculas }) => {
+const EstructuraPeliculasNuevasYPopulares = ({
+  tituloSeccion,
+  peliculas,
+  clickBotonPagSiguiente,
+  clickBotonPagAnterior,
+  pagina,
+}) => {
   return (
     <Box
       sx={{
@@ -32,10 +41,33 @@ const EstructuraPeliculasNuevasYPopulares = ({ tituloSeccion, peliculas }) => {
           />
         ))}
       </Box>
-      <Box>
-        <Stack spacing={2}>
-          <Pagination count={10} />
-        </Stack>
+      <Box
+        sx={{
+          marginTop: 5,
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
+        <Button
+          variant="contained"
+          startIcon={<ArrowBackIosNewOutlinedIcon />}
+          sx={{ m: 2 }}
+          onClick={clickBotonPagAnterior}
+        >
+          Página Anterior
+        </Button>
+        <Typography variant="h5" gutterBottom component="div" sx={{ m: 2 }}>
+          Pagina {pagina}
+        </Typography>
+        <Button
+          variant="contained"
+          endIcon={<ArrowForwardIosOutlinedIcon />}
+          sx={{ m: 2 }}
+          onClick={clickBotonPagSiguiente}
+        >
+          Página Siguiente
+        </Button>
       </Box>
     </Box>
   );
