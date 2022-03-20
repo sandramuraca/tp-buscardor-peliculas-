@@ -29,6 +29,7 @@ const Populares = () => {
         peliculas={peliculas}
         clickBotonPagSiguiente={handleClickSiguiente}
         clickBotonPagAnterior={handleClickAnterior}
+        pagina={pagina}
       />
     </Box>
   );

@@ -30,6 +30,7 @@ const UltimosLanzamientos = () => {
         peliculas={peliculas}
         clickBotonPagSiguiente={handleClickSiguiente}
         clickBotonPagAnterior={handleClickAnterior}
+        pagina={pagina}
       />
     </Box>
   );
