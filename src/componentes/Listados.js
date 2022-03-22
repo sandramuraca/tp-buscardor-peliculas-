@@ -47,7 +47,7 @@ const Listados = ({ tituloListado, urlListado }) => {
           key={pelicula.id}
           tituloItem={pelicula.title}
           imagenItem={`https://image.tmdb.org/t/p/w300/${pelicula.poster_path}`}
-          linkIcono={`/detallePelicula/${pelicula.id}`}
+          linkIcono={`/detalle-pelicula/${pelicula.id}`}
         />
       ))}
      
