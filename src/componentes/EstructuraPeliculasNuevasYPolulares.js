@@ -37,7 +37,7 @@ const EstructuraPeliculasNuevasYPopulares = ({
             key={pelicula.id}
             tituloTarjeta={pelicula.title}
             imagenTarjeta={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}
-            linkTarjeta={`/detallePelicula/${pelicula.id}`}
+            linkTarjeta={`/detalle-pelicula/${pelicula.id}`}
           />
         ))}
       </Box>
