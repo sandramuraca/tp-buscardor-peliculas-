@@ -26,6 +26,7 @@ const Carrousel = () => {
         imagenSlider={`https://image.tmdb.org/t/p/original/${pelicula.backdrop_path}
         `}
         descripcionSlider={pelicula.overview}
+        linkCarrousel={`/detalle-pelicula/${pelicula.id}`}
         />
       ))}
     </Carousel>

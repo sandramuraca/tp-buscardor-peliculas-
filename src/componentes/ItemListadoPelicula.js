@@ -11,7 +11,6 @@ import Avatar from '@mui/material/Avatar';
 import { colorPrimario } from "../auxiliares/Auxiliares";
 import { IconButton } from '@mui/material';
 
-
 //Las props de este comonente estan definidas en el map que estoy haciendo en el componente "Listados", alli le estoy pasando los valores
 
 const ItemListadoPelicula = ({tituloItem, imagenItem, linkIcono}) =>{

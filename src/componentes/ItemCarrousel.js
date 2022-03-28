@@ -1,8 +1,17 @@
 import { Box } from "@mui/system";
 import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
+import { IconButton } from "@mui/material";
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import { colorPrimario } from "../auxiliares/Auxiliares";
 
-const ItemCarrousel = ({ tituloSlider, imagenSlider, descripcionSlider }) => {
+const ItemCarrousel = ({
+  tituloSlider,
+  imagenSlider,
+  descripcionSlider,
+  linkCarrousel,
+}) => {
   return (
     <Box
       sx={{
@@ -36,8 +45,11 @@ const ItemCarrousel = ({ tituloSlider, imagenSlider, descripcionSlider }) => {
         <Typography variant="body1" gutterBottom p={2}>
           {descripcionSlider}
         </Typography>
-        <p></p>
-        <Button>Ver más</Button>
+        <Link to={linkCarrousel}>
+          <IconButton style={{ color: colorPrimario }}>
+            <RemoveRedEyeIcon />
+          </IconButton>
+        </Link>
       </Box>
     </Box>
   );
