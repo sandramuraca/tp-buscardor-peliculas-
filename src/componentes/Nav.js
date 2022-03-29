@@ -6,12 +6,12 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
 import LocalActivityIcon from "@mui/icons-material/LocalActivity";
-import { colorPrimario } from "../auxiliares/Auxiliares";
+import { colorPrimario, colorSegundario } from "../auxiliares/Auxiliares";
 
 const Nav = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" sx={{  }}>
+      <AppBar position="fixed" sx={{ bgcolor: colorPrimario }}>
         <Toolbar>
           <LocalActivityIcon
             size="large"
