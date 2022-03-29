@@ -32,7 +32,7 @@ const Footer = () => {
       </IconButton>
       
 
-    <IconButton  target="_blank" href="https://github.com/sandramuraca/tp-buscardor-peliculas-" sx={{ color: "white" }}>
+    <IconButton  target="_blank" href="https://github.com/sandramuraca" sx={{ color: "white" }}>
         <GitHubIcon fontSize="large" />
       </IconButton>
 

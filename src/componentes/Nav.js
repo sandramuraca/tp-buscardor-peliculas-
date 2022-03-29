@@ -11,7 +11,7 @@ import { colorPrimario } from "../auxiliares/Auxiliares";
 const Nav = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" sx={{ bgcolor: colorPrimario }}>
+      <AppBar position="fixed" sx={{  }}>
         <Toolbar>
           <LocalActivityIcon
             size="large"

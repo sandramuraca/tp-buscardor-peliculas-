@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import Typography from "@mui/material/Typography";
-import DetallePelicula from "./DetallePelicula";
+import { colorPrimario } from "../auxiliares/Auxiliares";
 
 const EstructuraPeliculasNuevasYPopulares = ({
   tituloSeccion,
@@ -46,30 +46,35 @@ const EstructuraPeliculasNuevasYPopulares = ({
           marginTop: 5,
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: "center",
+          justifyContent: "center"
+        
         }}
       >
         <Button
           variant="contained"
           startIcon={<ArrowBackIosNewOutlinedIcon />}
-          sx={{ m: 2 }}
+          sx={{ m: 2, bgcolor: colorPrimario}}
           onClick={clickBotonPagAnterior}
+          disabled={pagina === 1}
+          
         >
-          Página Anterior
+         Anterior
         </Button>
+
         <Typography variant="h5" gutterBottom component="div" sx={{ m: 2 }}>
           Pagina {pagina}
         </Typography>
+
         <Button
           variant="contained"
           endIcon={<ArrowForwardIosOutlinedIcon />}
-          sx={{ m: 2 }}
+          sx={{ m: 2, bgcolor: colorPrimario }}
           onClick={clickBotonPagSiguiente}
         >
-          Página Siguiente
+          Siguiente
         </Button>
       </Box>
-      <DetallePelicula sx={{m:5}}/>
+     
     </Box>
   );
 };
