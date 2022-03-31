@@ -4,7 +4,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Typography from "@mui/material/Typography";
-import { colorPrimario } from "../auxiliares/Auxiliares";
+import { colorPrimario , colorTipografiaPrimario } from "../auxiliares/Auxiliares";
 
 const Footer = () => {
   return (
@@ -21,7 +21,7 @@ const Footer = () => {
         
       }}
     >
-      <Typography variant="h6" sx={{ color: "white" }}>
+      <Typography variant="h6" sx={{ color: colorTipografiaPrimario  }}>
         Hecho con Amor por Sandra - 2022
       </Typography>
 

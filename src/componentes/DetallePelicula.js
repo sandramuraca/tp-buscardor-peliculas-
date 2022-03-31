@@ -3,6 +3,7 @@ import { Box } from "@mui/system";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { baseUrl, apiKey } from "../auxiliares/Auxiliares";
+import { colorTipografiaPrimario } from "../auxiliares/Auxiliares";
 
 const DetallePelicula = () => {
   const [contenidoDetalle, setContenidoDetalle] = useState([]);
@@ -47,7 +48,7 @@ const DetallePelicula = () => {
           variant="h3"
           gutterBottom
           component="div"
-          sx={{ m: 2, color: "white" }}
+          sx={{ m: 2, color: colorTipografiaPrimario }}
         >
           {contenidoDetalle.title}
         </Typography>
