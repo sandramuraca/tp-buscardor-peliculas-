@@ -3,6 +3,11 @@ import { TextField } from "@mui/material";
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { apiKey } from "../auxiliares/Auxiliares";
+import Tarjeta from "./Tarjeta";
+
+//Fetch al endpoint serch
+//Se utiliza seacrchParams para linkear la url con lo que ingresa el usuario en el input, la url se actualiza a la medica que el usuario ingresa. Busqueda reactiva
+//busquedaUsuario = value del input
 
 const Buscador = () => {
   const [searchParams, setSearchParams] = useSearchParams({
@@ -10,8 +15,6 @@ const Buscador = () => {
   });
 
   const [peliculas, setPeliculas] = useState([]);
-
-  const [valorDelInput, setValorDelInput] = useState("");
 
   const handleChange = (e) => {
     setSearchParams({ busquedaUsuario: e.target.value });
@@ -28,17 +31,47 @@ const Buscador = () => {
   }, [searchParams]);
 
   return (
-    <Box sx={{ marginTop: 10 }}>
-      <TextField
-        sx={{ width: 400 }}
-        id="standard-basic"
-        label="Buscar película"
-        variant="standard"
-        onChange={handleChange}
-        value={searchParams.get("busquedaUsuario")}
-      />
+    <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <Box
+        sx={{
+          marginTop: 10,
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center"
+        }}
+      >
+        <TextField
+          sx={{ width: 400 }}
+          id="standard-basic"
+          label="Buscar película"
+          variant="standard"
+          onChange={handleChange}
+          value={searchParams.get("busquedaUsuario")}
+        />
 
-      {peliculas && peliculas.map((pelicula) => <h1>{pelicula.title}</h1>)}
+        <Box
+          sx={{
+            marginTop: 10,
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          {peliculas &&
+            peliculas.map((pelicula) => {
+              return (
+                <Tarjeta
+                  key={pelicula.id}
+                  tituloTarjeta={pelicula.title}
+                  imagenTarjeta={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}
+                  linkTarjeta={`/detalle-pelicula/${pelicula.id}`}
+                />
+              );
+            })}
+        </Box>
+      </Box>
     </Box>
   );
 };
