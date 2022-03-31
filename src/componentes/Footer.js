@@ -2,12 +2,9 @@ import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Typography from "@mui/material/Typography";
 import { colorPrimario } from "../auxiliares/Auxiliares";
-import { Link } from "react-router-dom";
-
 
 const Footer = () => {
   return (
@@ -18,6 +15,10 @@ const Footer = () => {
         textAlign: "center",
         bgcolor: colorPrimario,
         height: 90,
+        position: "absolute",
+        bottom: 0,
+        width: "100%",
+        
       }}
     >
       <Typography variant="h6" sx={{ color: "white" }}>
