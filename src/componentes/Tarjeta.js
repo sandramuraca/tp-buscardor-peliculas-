@@ -9,7 +9,7 @@ import { IconButton } from '@mui/material';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import { colorPrimario } from "../auxiliares/Auxiliares";
 
-const Tarjeta = ({ tituloTarjeta, imagenTarjeta, linkTarjeta, linkIcono }) => {
+const Tarjeta = ({ tituloTarjeta, imagenTarjeta, linkTarjeta }) => {
   return (
     <Card sx={{ width: 250,
                 height: 370,

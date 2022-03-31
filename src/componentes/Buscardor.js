@@ -1,49 +1,77 @@
 import { Box } from "@mui/system";
 import { TextField } from "@mui/material";
-import { Button } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
 import { useSearchParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { apiKey } from "../auxiliares/Auxiliares";
+import Tarjeta from "./Tarjeta";
+
+//Fetch al endpoint serch
+//Se utiliza seacrchParams para linkear la url con lo que ingresa el usuario en el input, la url se actualiza a la medica que el usuario ingresa. Busqueda reactiva
+//busquedaUsuario = value del input
 
 const Buscador = () => {
-  const [searchParams, setSeacrhParams] = useSearchParams({
+  const [searchParams, setSearchParams] = useSearchParams({
     busquedaUsuario: "",
   });
 
+  const [peliculas, setPeliculas] = useState([]);
+
+  const handleChange = (e) => {
+    setSearchParams({ busquedaUsuario: e.target.value });
+  };
+
   useEffect(() => {
-    //esta api se reemplaza con la de peliculas
     fetch(
-      `https://rickandmortyapi.com/api/character/?name=${searchParams.get(
+      `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=es&query=${searchParams.get(
         "busquedaUsuario"
       )}`
     )
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => setPeliculas(data.results));
   }, [searchParams]);
 
-  const handleChange = (e) => {
-    setSeacrhParams({
-      busquedaUsuario: e.target.value,
-    });
-  };
   return (
-    <Box sx={{ marginTop: 10 }}>
-      <TextField
-        sx={{ width: 400 }}
-        id="standard-basic"
-        label="Buscar película"
-        variant="standard"
-        onChange={handleChange}
-        value={searchParams.get("busquedaUsuario")}
-      />
-      <Button
-        margin="normal"
-        variant="outline"
-        endIcon={<SearchIcon />}
-        // onClick={clickBoton}
+    <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <Box
+        sx={{
+          marginTop: 10,
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center"
+        }}
       >
-        Buscar
-      </Button>
+        <TextField
+          sx={{ width: 400 }}
+          id="standard-basic"
+          label="Buscar película"
+          variant="standard"
+          onChange={handleChange}
+          value={searchParams.get("busquedaUsuario")}
+        />
+
+        <Box
+          sx={{
+            marginTop: 10,
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          {peliculas &&
+            peliculas.map((pelicula) => {
+              return (
+                <Tarjeta
+                  key={pelicula.id}
+                  tituloTarjeta={pelicula.title}
+                  imagenTarjeta={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}
+                  linkTarjeta={`/detalle-pelicula/${pelicula.id}`}
+                />
+              );
+            })}
+        </Box>
+      </Box>
     </Box>
   );
 };
