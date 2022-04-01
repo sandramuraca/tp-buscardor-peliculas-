@@ -4,39 +4,40 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import MenuIcon from "@mui/icons-material/Menu";
 import LocalActivityIcon from "@mui/icons-material/LocalActivity";
-import { colorPrimario, colorSegundario } from "../auxiliares/Auxiliares";
+import { colorPrimario, colorTipografiaPrimario  } from "../auxiliares/Auxiliares";
+import { display } from "@mui/system";
 
 const Nav = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" sx={{ bgcolor: colorPrimario }}>
-        <Toolbar>
+        <Toolbar sx={{display:"flex", justifyContent:"space-between", flexWrap:"wrap" }}>
+          <Box sx={{display:"flex", flexWrap: "wrap"}}>
           <LocalActivityIcon
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </LocalActivityIcon>
+          ></LocalActivityIcon>
+
           <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
             Buscador Películas
           </Typography>
+          </Box>
+          
+          <Box sx={{display:"flex", flexWrap: "wrap"}}>
           <Button color="inherit">
-            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-              {" "}
-              Home{" "}
+            <Link to="/" style={{ textDecoration: "none", color: colorTipografiaPrimario }}>
+              Home
             </Link>
           </Button>
 
           <Button>
             <Link
               to="/ultimos-lanzamientos"
-              style={{ textDecoration: "none", color: "white" }}
-            >
+              style={{ textDecoration: "none", color: colorTipografiaPrimario  }}>
               Ultimos Lanzamientos
             </Link>
           </Button>
@@ -44,20 +45,20 @@ const Nav = () => {
           <Button>
             <Link
               to="/populares"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Populares{" "}
+              style={{ textDecoration: "none", color: colorTipografiaPrimario  }}>
+              Populares
             </Link>
           </Button>
 
           <Button>
             <Link
               to="/buscar"
-              style={{ textDecoration: "none", color: "white" }}
-            >
+              style={{ textDecoration: "none", color: colorTipografiaPrimario  }}>
               Buscar
             </Link>
           </Button>
+          </Box>
+          
         </Toolbar>
       </AppBar>
     </Box>

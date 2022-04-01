@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 import { IconButton } from "@mui/material";
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-import { colorPrimario } from "../auxiliares/Auxiliares";
+import {  colorTipografiaPrimario } from "../auxiliares/Auxiliares";
 
 const ItemCarrousel = ({
   tituloSlider,
@@ -32,8 +32,9 @@ const ItemCarrousel = ({
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          width: "600px",
-          bgcolor: "#cacaca",
+          width: "80%",
+          bgcolor: "#3f3b3b",
+          color: colorTipografiaPrimario,
           opacity: [0.9, 0.8, 0.7],
           borderRadius: "5px",
         }}
@@ -45,7 +46,7 @@ const ItemCarrousel = ({
           {descripcionSlider}
         </Typography>
         <Link to={linkCarrousel}>
-          <IconButton style={{ color: colorPrimario }}>
+          <IconButton style={{ color: colorTipografiaPrimario }}>
             <RemoveRedEyeIcon />
           </IconButton>
         </Link>

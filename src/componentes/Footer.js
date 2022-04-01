@@ -21,7 +21,7 @@ const Footer = () => {
         
       }}
     >
-      <Typography variant="h6" sx={{ color: colorTipografiaPrimario  }}>
+      <Typography variant="subtitle1" gutterBottom component="div" sx={{ color: colorTipografiaPrimario  }}>
         Hecho con Amor por Sandra - 2022
       </Typography>
 
