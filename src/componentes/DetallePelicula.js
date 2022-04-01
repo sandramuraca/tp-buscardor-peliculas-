@@ -5,9 +5,12 @@ import { useParams } from "react-router-dom";
 import { baseUrl, apiKey } from "../auxiliares/Auxiliares";
 import { colorTipografiaPrimario } from "../auxiliares/Auxiliares";
 
-const DetallePelicula = () => {
-  const [contenidoDetalle, setContenidoDetalle] = useState([]);
+//useParams recibe el valor "variable" declarado en el ruteo de map para el componente "Detalle pelicula"
+//con el id de cada pelicula trae de la api la informacion a mostrar en cada link
 
+const DetallePelicula = () => {
+
+  const [contenidoDetalle, setContenidoDetalle] = useState([]);
   const params = useParams();
 
   useEffect(() => {
@@ -48,9 +51,8 @@ const DetallePelicula = () => {
           variant="h3"
           gutterBottom
           component="div"
-          sx={{ m: 2, color: colorTipografiaPrimario }}
-        >
-          {contenidoDetalle.title}
+          sx={{ m: 2, color: colorTipografiaPrimario }}>
+            {contenidoDetalle.title}
         </Typography>
 
         <Typography

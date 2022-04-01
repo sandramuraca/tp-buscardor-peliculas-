@@ -4,9 +4,13 @@ import { useEffect, useState } from "react";
 import {  baseUrl, apiKey } from "../auxiliares/Auxiliares";
 import ItemCarrousel from "./ItemCarrousel";
 
+//hago el fetch al endpoint now_playing
+//defino las props que le paso al componente item carrousel
+
 const Carrousel = () => {
   
   const [peliculas, setPeliculas] = useState([])
+
   useEffect (() => {
     fetch(`${baseUrl}now_playing?api_key=${apiKey}&language=es-AR&page=1`)
     .then(res => res.json())

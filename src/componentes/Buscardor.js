@@ -6,7 +6,7 @@ import { apiKey } from "../auxiliares/Auxiliares";
 import Tarjeta from "./Tarjeta";
 
 //Fetch al endpoint serch
-//Se utiliza seacrchParams para linkear la url con lo que ingresa el usuario en el input, la url se actualiza a la medica que el usuario ingresa. Busqueda reactiva
+//Se utiliza seacrchParams para linkear la url con lo que ingresa el usuario en el input, la url se actualiza cuando el usuario ingresa texto en el imput. Busqueda reactiva
 //busquedaUsuario = value del input
 
 const Buscador = () => {

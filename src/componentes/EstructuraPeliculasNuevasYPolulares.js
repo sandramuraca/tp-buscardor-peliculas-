@@ -6,6 +6,10 @@ import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutl
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import Typography from "@mui/material/Typography";
 import { colorPrimario } from "../auxiliares/Auxiliares";
+import IconButton from "@mui/material/IconButton";
+
+//esta estructura se reutiliza en los componentes "Populares" y "Ultimos Lanzamientos" ya que son iguales
+//se define la estructura de las tarjetas y el paginado
 
 const EstructuraPeliculasNuevasYPopulares = ({
   tituloSeccion,
@@ -24,6 +28,14 @@ const EstructuraPeliculasNuevasYPopulares = ({
         justifyContent: "center",
       }}
     >
+      <Typography
+        variant="h4"
+        gutterBottom
+        component="div"
+        sx={{ display: "flex", justifyContent: "center" }}
+      >
+        {tituloSeccion}
+      </Typography>
       <Box
         sx={{
           marginTop: 5,
@@ -46,35 +58,28 @@ const EstructuraPeliculasNuevasYPopulares = ({
           marginTop: 5,
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: "center"
-        
+          justifyContent: "center",
         }}
       >
-        <Button
-          variant="contained"
-          startIcon={<ArrowBackIosNewOutlinedIcon />}
-          sx={{ m: 2, bgcolor: colorPrimario}}
+        <IconButton
+          sx={{ m: 2, bgcolor: colorPrimario }}
           onClick={clickBotonPagAnterior}
           disabled={pagina === 1}
-          
         >
-         Anterior
-        </Button>
+          <ArrowBackIosNewOutlinedIcon />
+        </IconButton>
 
-        <Typography variant="h5" gutterBottom component="div" sx={{ m: 2 }}>
+        <Typography variant="h6" gutterBottom component="div" sx={{ m: 2 }}>
           Pagina {pagina}
         </Typography>
 
-        <Button
-          variant="contained"
-          endIcon={<ArrowForwardIosOutlinedIcon />}
+        <IconButton
           sx={{ m: 2, bgcolor: colorPrimario }}
           onClick={clickBotonPagSiguiente}
         >
-          Siguiente
-        </Button>
+          <ArrowForwardIosOutlinedIcon />
+        </IconButton>
       </Box>
-     
     </Box>
   );
 };

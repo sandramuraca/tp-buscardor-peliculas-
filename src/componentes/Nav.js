@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import LocalActivityIcon from "@mui/icons-material/LocalActivity";
 import { colorPrimario, colorTipografiaPrimario  } from "../auxiliares/Auxiliares";
-import { display } from "@mui/system";
 
 const Nav = () => {
   return (
@@ -14,13 +13,14 @@ const Nav = () => {
       <AppBar position="fixed" sx={{ bgcolor: colorPrimario }}>
         <Toolbar sx={{display:"flex", justifyContent:"space-between", flexWrap:"wrap" }}>
           <Box sx={{display:"flex", flexWrap: "wrap"}}>
-          <LocalActivityIcon
+          {/* <LocalActivityIcon
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-          ></LocalActivityIcon>
+          ></LocalActivityIcon> */}
+          <img src={"../assets/img/ticket.svg"}/>
 
           <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
             Buscador Películas
