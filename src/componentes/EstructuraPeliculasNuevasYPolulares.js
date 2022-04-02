@@ -32,7 +32,7 @@ const EstructuraPeliculasNuevasYPopulares = ({
         variant="h4"
         gutterBottom
         component="div"
-        sx={{ display: "flex", justifyContent: "center" }}
+        sx={{ display: "flex", justifyContent: "center", marginTop: "60px" }}
       >
         {tituloSeccion}
       </Typography>

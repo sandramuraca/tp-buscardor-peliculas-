@@ -31,7 +31,7 @@ const Buscador = () => {
   }, [searchParams]);
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+    <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "60px" }}>
       <Box
         sx={{
           marginTop: 10,
@@ -42,7 +42,6 @@ const Buscador = () => {
         }}
       >
         <TextField
-          sx={{ width: 400 }}
           id="standard-basic"
           label="Buscar película"
           variant="standard"
