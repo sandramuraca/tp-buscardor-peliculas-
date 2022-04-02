@@ -33,12 +33,12 @@ const Nav = () => {
           </Typography>
           </Box>
           
-          <Box sx={{display:"flex", 
-                    flexWrap: "wrap", 
+          <Box sx={{
                     display:{ 
                     xs: "none",
                     sm: "none",
                     md: "inline"}}}>
+
           <Button color="inherit">
             <Link to="/" style={{ textDecoration: "none", color: colorTipografiaPrimario }}>
               Home
@@ -78,7 +78,7 @@ const Nav = () => {
            }}
            >
               <MenuDesplagable/>
-             </Box>    
+          </Box>    
          
         </Toolbar>
       </AppBar>
