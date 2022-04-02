@@ -31,7 +31,10 @@ const Buscador = () => {
   }, [searchParams]);
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "60px" }}>
+    <Box sx={{ display: "flex", 
+              justifyContent: "center", 
+              alignItems: "center",
+              marginTop: "60px" }}>
       <Box
         sx={{
           marginTop: 10,
@@ -47,6 +50,11 @@ const Buscador = () => {
           variant="standard"
           onChange={handleChange}
           value={searchParams.get("busquedaUsuario")}
+          sx={{
+            width:{
+              xs:"350px",
+              sm:"450px",
+              md:"600px"}}}
         />
 
         <Box
@@ -55,8 +63,8 @@ const Buscador = () => {
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "center",
-            alignItems: "center"
-          }}
+            alignItems: "center", 
+            }}
         >
           {peliculas &&
             peliculas.map((pelicula) => {
