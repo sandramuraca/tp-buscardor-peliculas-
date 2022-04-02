@@ -6,7 +6,13 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import LocalActivityIcon from "@mui/icons-material/LocalActivity";
 import { colorPrimario, colorTipografiaPrimario  } from "../auxiliares/Auxiliares";
+import MenuDesplagable from "./menuDesplegable"
+
 import imagenTicket from "../assets/ticket.svg"
+
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+
 const Nav = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -27,7 +33,12 @@ const Nav = () => {
           </Typography>
           </Box>
           
-          <Box sx={{display:"flex", flexWrap: "wrap"}}>
+          <Box sx={{display:"flex", 
+                    flexWrap: "wrap", 
+                    display:{ 
+                    xs: "none",
+                    sm: "none",
+                    md: "inline"}}}>
           <Button color="inherit">
             <Link to="/" style={{ textDecoration: "none", color: colorTipografiaPrimario }}>
               Home
@@ -58,7 +69,17 @@ const Nav = () => {
             </Link>
           </Button>
           </Box>
-          
+
+           <Box sx={{
+             display:{ 
+              xs: "inline",
+              sm: "inline",
+              md: "none"}
+           }}
+           >
+              <MenuDesplagable/>
+             </Box>    
+         
         </Toolbar>
       </AppBar>
     </Box>
