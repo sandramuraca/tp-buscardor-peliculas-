@@ -38,11 +38,29 @@ const ItemCarrousel = ({
           opacity: [0.9, 0.8, 0.7],
           borderRadius: "5px",
         }}
-      >
-        <Typography variant="h5" gutterBottom component="div" p={2}>
+      > 
+     
+      <Typography   p={2} sx={{
+          fontSize:{
+            xs: "19px",
+            sm: "21px",
+            md: "23px",
+            lg: "25px",
+            xl: "27px"
+          }
+        }}>
           {tituloSlider}
         </Typography>
-        <Typography variant="body1" gutterBottom p={2}>
+        <Typography  gutterBottom p={2}
+        sx={{
+          fontSize:{
+            xs: "14px",
+            sm: "16px",
+            md: "18px",
+            lg: "20px",
+            xl: "20px"
+          }
+        }}>
           {descripcionSlider}
         </Typography>
         <Link to={linkCarrousel}>
@@ -50,6 +68,7 @@ const ItemCarrousel = ({
             <RemoveRedEyeIcon />
           </IconButton>
         </Link>
+              
       </Box>
     </Box>
   );
