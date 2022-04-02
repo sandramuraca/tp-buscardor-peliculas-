@@ -17,11 +17,11 @@ const Footer = () => {
         flexDirection: "column",
         textAlign: "center",
         bgcolor: colorPrimario,
-        height: 90,
+        height: "100px",
         position: "absolute",
         bottom: 0,
         width: "100%",
-      }}
+       }}
     >
       <Typography
         variant="subtitle1"

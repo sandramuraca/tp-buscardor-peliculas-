@@ -23,6 +23,10 @@ const Listados = ({ tituloListado, urlListado }) => {
           alignItems: "center",
           justifyContent: "center",
           borderRadius: 1,
+          width: {
+            xs: "80%",
+            md: "100%"
+          }
          
         }}
       >
@@ -41,6 +45,10 @@ const Listados = ({ tituloListado, urlListado }) => {
           height: "400px",
           overflowY: "scroll",
           borderBottom: `1px ${colorPrimario} solid`,
+          width: {
+            xs: "80%",
+            md: "100%"
+          }
       }}
       >        
         {peliculas.map((pelicula) => (
