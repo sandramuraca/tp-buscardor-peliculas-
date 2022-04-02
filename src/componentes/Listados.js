@@ -2,9 +2,14 @@ import { useState, useEffect } from "react";
 import { Box } from "@mui/system";
 import ItemListadoPelicula from "./ItemListadoPelicula";
 import Typography from "@mui/material/Typography";
-import { colorPrimario, baseUrl, apiKey } from "../auxiliares/Auxiliares";
+import {
+  colorPrimario,
+  baseUrl,
+  apiKey,
+  colorTipografiaPrimario,
+} from "../auxiliares/Auxiliares";
 
-//Aca estoy haciendo el fetch a la api, en la prop `urlListado` le estoy pasando el endpoint al que quiero que vaya a buscar la información, por que los listados son 2 uno de "Peliculas Populares" que apunta al end point `popular` y otro "Mejor Puntuadas" que apunta a `top_rated`, tambien le estoy pasando como prop `tituloListado` que define el texto del div que esta sobre el listado de los item de cada pelicula, los valores de estas props los estoy pasando en el componente Main. donde estoy llamando estos componentes.
+//Fetch a la api, en la prop `urlListado` le estoy pasando el endpoint al que quiero que vaya a buscar la información, por que los listados son 2 uno de "Peliculas Populares" que apunta al end point `popular` y otro "Mejor Puntuadas" que apunta a `top_rated`, tambien le estoy pasando como prop `tituloListado` que define el texto del div que esta sobre el listado de los item de cada pelicula, los valores de estas props los estoy pasando en el componente Main. donde estoy llamando estos componentes.
 
 const Listados = ({ tituloListado, urlListado }) => {
   const [peliculas, setPeliculas] = useState([]);
@@ -23,15 +28,18 @@ const Listados = ({ tituloListado, urlListado }) => {
           alignItems: "center",
           justifyContent: "center",
           borderRadius: 1,
-          width: {
-            xs: "80%",
-            md: "100%"
-          }
-         
+          mt:4,
         }}
       >
         <Typography
-          sx={{ bgcolor: colorPrimario, color: "white" }}
+          sx={{
+            bgcolor: colorPrimario,
+            color: colorTipografiaPrimario,
+              fontSize: {
+              xs: "18px",
+              sm: "20px",
+            },
+          }}
           variant="h5"
           gutterBottom
           component="div"
@@ -45,12 +53,8 @@ const Listados = ({ tituloListado, urlListado }) => {
           height: "400px",
           overflowY: "scroll",
           borderBottom: `1px ${colorPrimario} solid`,
-          width: {
-            xs: "80%",
-            md: "100%"
-          }
-      }}
-      >        
+        }}
+      >
         {peliculas.map((pelicula) => (
           <ItemListadoPelicula
             key={pelicula.id}

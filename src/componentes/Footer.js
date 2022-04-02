@@ -17,6 +17,7 @@ const Footer = () => {
         flexDirection: "column",
         textAlign: "center",
         bgcolor: colorPrimario,
+        width: "100%",
         height: "100px",
         position: "absolute",
         bottom: 0,
