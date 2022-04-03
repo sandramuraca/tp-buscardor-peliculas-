@@ -2,14 +2,19 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { baseUrl, apiKey } from "../auxiliares/Auxiliares";
-import { colorTipografiaPrimario } from "../auxiliares/Auxiliares";
+import {
+  baseUrl,
+  apiKey,
+  colorPrimario,
+  colorTipografiaPrimario,
+} from "../auxiliares/Auxiliares";
+import MovieCreationIcon from '@mui/icons-material/MovieCreation';
+import { Chip } from "@mui/material";
 
 //useParams recibe el valor "variable" declarado en el ruteo de map para el componente "Detalle pelicula"
 //con el id de cada pelicula trae de la api la informacion a mostrar en cada link
 
 const DetallePelicula = () => {
-
   const [contenidoDetalle, setContenidoDetalle] = useState([]);
   const params = useParams();
 
@@ -32,13 +37,15 @@ const DetallePelicula = () => {
         backgroundBlendMode: "darken",
       }}
     >
-
-      <Box sx={{
-        display:{ 
-          xs: "none",
-          sm: "none",
-          md: "inline"}
-      }}>
+      <Box
+        sx={{
+          display: {
+            xs: "none",
+            sm: "none",
+            md: "inline",
+          },
+        }}
+      >
         <img
           src={`https://image.tmdb.org/t/p/w300/${contenidoDetalle.poster_path}`}
         />
@@ -57,37 +64,53 @@ const DetallePelicula = () => {
           variant="h3"
           gutterBottom
           component="div"
-          sx={{ m: 2, color: colorTipografiaPrimario }}>
-            {contenidoDetalle.title}
+          sx={{ m: 2, color: colorTipografiaPrimario }}
+        >
+          {contenidoDetalle.title}
+        </Typography>
+
+        <Typography variant="h4" sx={{ color: "white", m: 2 }}>
+          {contenidoDetalle.release_date &&
+            contenidoDetalle.release_date.slice(0, 4)}
         </Typography>
 
         <Typography
-                variant="h4"
-                sx={{ color: "white", m:2}}
-              >
-                {contenidoDetalle.release_date &&
-                  contenidoDetalle.release_date.slice(0, 4)}
-              </Typography>
-
-        <Typography variant="h5" component="div" sx={{ m: 2, color: "white" }}>
+          variant="h5"
+          component="div"
+          sx={{ m: 2, color: colorTipografiaPrimario }}
+        >
           General:
         </Typography>
 
-        <Typography variant="body1" gutterBottom sx={{ m: 2, color: "white" }}>
+        <Typography
+          variant="body1"
+          gutterBottom
+          sx={{ m: 2, color: colorTipografiaPrimario }}
+        >
           {contenidoDetalle.overview}
         </Typography>
 
-        <Typography variant="h5" component="div" sx={{ m: 2, color: "white" }}>
+        <Typography
+          variant="h5"
+          component="div"
+          sx={{ m: 2, color: colorTipografiaPrimario }}
+        >
           Generos:
         </Typography>
-
-        {contenidoDetalle.genres && 
-        contenidoDetalle.genres.map((genero) => (
-          <Typography variant="body1" sx={{ m: 2, color: "white" }}>
-          {genero.name}
-        </Typography>
-        ))}
-  
+        <Box>
+          {contenidoDetalle.genres &&
+            contenidoDetalle.genres.map((genero) => (
+              <Chip
+                icon={<MovieCreationIcon />}
+                label={genero.name}
+                sx={{
+                  m: 2,
+                  color: colorTipografiaPrimario,
+                  bgcolor: colorPrimario,
+                }}
+              />
+            ))}
+        </Box>
       </Box>
     </Box>
   );
