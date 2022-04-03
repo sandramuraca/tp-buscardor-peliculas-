@@ -24,11 +24,15 @@ const Nav = () => {
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{ mr: 2, mt:1}}
           ></LocalActivityIcon>
           {/* <img src={imagenTicket} /> */}
 
-          <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+          <Typography sx={{ flexGrow: 1,
+                      fontSize:{
+                        xs:"20px",
+                        sm: "24px",
+                        md:"36px"} }}>
             Buscador Películas
           </Typography>
           </Box>
