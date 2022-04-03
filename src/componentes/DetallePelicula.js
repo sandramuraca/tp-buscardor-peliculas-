@@ -32,7 +32,13 @@ const DetallePelicula = () => {
         backgroundBlendMode: "darken",
       }}
     >
-      <Box>
+
+      <Box sx={{
+        display:{ 
+          xs: "none",
+          sm: "none",
+          md: "inline"}
+      }}>
         <img
           src={`https://image.tmdb.org/t/p/w300/${contenidoDetalle.poster_path}`}
         />
