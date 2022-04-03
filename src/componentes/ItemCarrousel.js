@@ -52,6 +52,7 @@ const ItemCarrousel = ({
               lg: "25px",
               xl: "27px",
             },
+            fontFamily: 'Poiret One', fontWeight:"600"
           }}
         >
           {tituloSlider}
@@ -67,6 +68,7 @@ const ItemCarrousel = ({
               lg: "20px",
               xl: "20px",
             },
+            fontFamily: 'Poiret One'
           }}
         >
           {descripcionSlider}

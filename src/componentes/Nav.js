@@ -31,6 +31,7 @@ const Nav = () => {
 
             <Typography
               sx={{
+                fontFamily: 'Poiret One',
                 color: colorTipografiaPrimario,
                 fontSize: {
                   xs: "20px",
@@ -44,7 +45,7 @@ const Nav = () => {
                 },
               }}
             >
-              Buscador Películas
+              Buscador de  Películas
             </Typography>
           </Box>
 
@@ -63,6 +64,8 @@ const Nav = () => {
                 style={{
                   textDecoration: "none",
                   color: colorTipografiaPrimario,
+                  fontFamily: 'Poiret One',
+                  fontSize:"20px"
                 }}
               >
                 Home
@@ -75,6 +78,8 @@ const Nav = () => {
                 style={{
                   textDecoration: "none",
                   color: colorTipografiaPrimario,
+                  fontFamily: 'Poiret One',
+                  fontSize:"20px"
                 }}
               >
                 Ultimos Lanzamientos
@@ -87,6 +92,8 @@ const Nav = () => {
                 style={{
                   textDecoration: "none",
                   color: colorTipografiaPrimario,
+                  fontFamily: 'Poiret One',
+                  fontSize:"20px"
                 }}
               >
                 Populares
@@ -99,9 +106,12 @@ const Nav = () => {
                 style={{
                   textDecoration: "none",
                   color: colorTipografiaPrimario,
+                  fontFamily: 'Poiret One',
+                  fontSize:"20px"
                 }}
               >
                 Buscar
+                
               </Link>
             </Button>
           </Box>
