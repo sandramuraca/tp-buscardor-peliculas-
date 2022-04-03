@@ -7,32 +7,30 @@ import Button from "@mui/material/Button";
 import LocalActivityIcon from "@mui/icons-material/LocalActivity";
 import { colorPrimario, colorTipografiaPrimario  } from "../auxiliares/Auxiliares";
 import MenuDesplagable from "./menuDesplegable"
+// import imagenTicket from "../assets/ticket.svg"
+import { ReactComponent as ImagenTicket} from "../assets/ticket.svg"
 
-import imagenTicket from "../assets/ticket.svg"
-
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 
 const Nav = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" sx={{ bgcolor: colorPrimario }}>
         <Toolbar sx={{display:"flex", justifyContent:"space-between", flexWrap:"wrap" }}>
-          <Box sx={{display:"flex", flexWrap: "wrap"}}>
-          <LocalActivityIcon
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2, mt:1}}
-          ></LocalActivityIcon>
-          {/* <img src={imagenTicket} /> */}
-
-          <Typography sx={{ flexGrow: 1,
-                      fontSize:{
+          <Box sx={{display: "flex"}}>
+         
+          <Box sx={{width: 100, mr:2}}>
+          <ImagenTicket />
+          </Box>
+          
+          <Typography sx={{ fontSize:{
                         xs:"20px",
                         sm: "24px",
-                        md:"36px"} }}>
+                        md:"36px"},
+                        marginTop:{
+                          xs:4,
+                          sm: 4,
+                          md:3
+                        } }}>
             Buscador Películas
           </Typography>
           </Box>
@@ -91,3 +89,14 @@ const Nav = () => {
 };
 
 export default Nav;
+
+ {/* <LocalActivityIcon
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2, mt:1}}
+          ></LocalActivityIcon> */}
+          {/* <Box sx={{backgroundImage: `url(${imagenTicket})`,
+        width:"50px"}}></Box> */}
+          {/* <img src={imagenTicket} /> */}
