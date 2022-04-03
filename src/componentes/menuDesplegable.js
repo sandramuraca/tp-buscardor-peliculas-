@@ -1,11 +1,12 @@
 import * as React from "react";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { IconButton } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import {
   colorPrimario,
+  colorSecundario,
   colorTipografiaPrimario,
 } from "../auxiliares/Auxiliares";
 
@@ -20,7 +21,7 @@ const MenuDesplegable = () => {
   };
 
   return (
-    <div>
+    <Box>
       <IconButton
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
@@ -28,7 +29,7 @@ const MenuDesplegable = () => {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        <MenuIcon />
+        <MenuIcon sx={{ color: colorTipografiaPrimario }} />
       </IconButton>
       <Menu
         id="basic-menu"
@@ -63,7 +64,7 @@ const MenuDesplegable = () => {
           </Link>
         </MenuItem>
       </Menu>
-    </div>
+    </Box>
   );
 };
 

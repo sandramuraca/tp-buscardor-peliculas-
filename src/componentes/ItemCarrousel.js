@@ -2,8 +2,11 @@ import { Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 import { IconButton } from "@mui/material";
-import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-import {  colorTipografiaPrimario } from "../auxiliares/Auxiliares";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import {
+  colorTipografiaPrimario,
+  colorTipografiaSecundario,
+} from "../auxiliares/Auxiliares";
 
 const ItemCarrousel = ({
   tituloSlider,
@@ -38,29 +41,34 @@ const ItemCarrousel = ({
           opacity: [0.9, 0.8, 0.7],
           borderRadius: "5px",
         }}
-      > 
-     
-      <Typography   p={2} sx={{
-          fontSize:{
-            xs: "19px",
-            sm: "21px",
-            md: "23px",
-            lg: "25px",
-            xl: "27px"
-          }
-        }}>
+      >
+        <Typography
+          p={2}
+          sx={{
+            fontSize: {
+              xs: "19px",
+              sm: "21px",
+              md: "23px",
+              lg: "25px",
+              xl: "27px",
+            },
+          }}
+        >
           {tituloSlider}
         </Typography>
-        <Typography  gutterBottom p={2}
-        sx={{
-          fontSize:{
-            xs: "14px",
-            sm: "16px",
-            md: "18px",
-            lg: "20px",
-            xl: "20px"
-          }
-        }}>
+        <Typography
+          gutterBottom
+          p={2}
+          sx={{
+            fontSize: {
+              xs: "14px",
+              sm: "16px",
+              md: "18px",
+              lg: "20px",
+              xl: "20px",
+            },
+          }}
+        >
           {descripcionSlider}
         </Typography>
         <Link to={linkCarrousel}>
@@ -68,7 +76,6 @@ const ItemCarrousel = ({
             <RemoveRedEyeIcon />
           </IconButton>
         </Link>
-              
       </Box>
     </Box>
   );

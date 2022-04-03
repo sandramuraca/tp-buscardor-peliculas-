@@ -8,7 +8,7 @@ import {
   colorPrimario,
   colorTipografiaPrimario,
 } from "../auxiliares/Auxiliares";
-import MovieCreationIcon from '@mui/icons-material/MovieCreation';
+import MovieCreationIcon from "@mui/icons-material/MovieCreation";
 import { Chip } from "@mui/material";
 
 //useParams recibe el valor "variable" declarado en el ruteo de map para el componente "Detalle pelicula"
@@ -35,6 +35,7 @@ const DetallePelicula = () => {
         justifyContent: "center",
         alignItems: "center",
         backgroundBlendMode: "darken",
+        mt: 8,
       }}
     >
       <Box
@@ -57,19 +58,19 @@ const DetallePelicula = () => {
           display: "flex",
           flexDirection: "column",
           borderRadius: "5px",
-          m: 2,
+          ml: 2,
         }}
       >
         <Typography
-          variant="h3"
+          variant="h4"
           gutterBottom
           component="div"
-          sx={{ m: 2, color: colorTipografiaPrimario }}
+          sx={{ mb: 1, color: colorTipografiaPrimario }}
         >
           {contenidoDetalle.title}
         </Typography>
 
-        <Typography variant="h4" sx={{ color: "white", m: 2 }}>
+        <Typography variant="h4" sx={{ color: colorTipografiaPrimario, mb: 1 }}>
           {contenidoDetalle.release_date &&
             contenidoDetalle.release_date.slice(0, 4)}
         </Typography>
@@ -77,15 +78,14 @@ const DetallePelicula = () => {
         <Typography
           variant="h5"
           component="div"
-          sx={{ m: 2, color: colorTipografiaPrimario }}
+          sx={{ m: 1, color: colorTipografiaPrimario }}
         >
           General:
         </Typography>
 
         <Typography
           variant="body1"
-          gutterBottom
-          sx={{ m: 2, color: colorTipografiaPrimario }}
+          sx={{ mb: 2, color: colorTipografiaPrimario }}
         >
           {contenidoDetalle.overview}
         </Typography>
@@ -93,7 +93,7 @@ const DetallePelicula = () => {
         <Typography
           variant="h5"
           component="div"
-          sx={{ m: 2, color: colorTipografiaPrimario }}
+          sx={{ color: colorTipografiaPrimario }}
         >
           Generos:
         </Typography>

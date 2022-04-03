@@ -8,9 +8,7 @@ const Populares = () => {
   const [pagina, setPagina] = useState(1);
 
   useEffect(() => {
-    fetch(
-      `${baseUrl}popular?api_key=${apiKey}&language=es-AR&page=${pagina}`
-    )
+    fetch(`${baseUrl}popular?api_key=${apiKey}&language=es-AR&page=${pagina}`)
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
   }, [pagina]);

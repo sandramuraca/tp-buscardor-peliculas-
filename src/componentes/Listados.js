@@ -28,20 +28,20 @@ const Listados = ({ tituloListado, urlListado }) => {
           alignItems: "center",
           justifyContent: "center",
           borderRadius: 1,
-          mt:4,
+          mt: 4,
         }}
       >
         <Typography
           sx={{
             bgcolor: colorPrimario,
             color: colorTipografiaPrimario,
-              fontSize: {
+            p: 3,
+            fontSize: {
               xs: "18px",
               sm: "20px",
             },
           }}
           variant="h5"
-          gutterBottom
           component="div"
         >
           {tituloListado}
