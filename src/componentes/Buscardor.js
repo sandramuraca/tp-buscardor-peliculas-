@@ -2,7 +2,11 @@ import { Box } from "@mui/system";
 import { TextField } from "@mui/material";
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { apiKey } from "../auxiliares/Auxiliares";
+import {
+  apiKey,
+  colorSecundario,
+  colorTipografiaPrimario,
+} from "../auxiliares/Auxiliares";
 import Tarjeta from "./Tarjeta";
 
 //Fetch al endpoint serch
@@ -31,17 +35,22 @@ const Buscador = () => {
   }, [searchParams]);
 
   return (
-    <Box sx={{ display: "flex", 
-              justifyContent: "center", 
-              alignItems: "center",
-              marginTop: "60px" }}>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: "60px",
+        paddin: "20px",
+      }}
+    >
       <Box
         sx={{
           marginTop: 10,
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
-          alignItems: "center"
+          alignItems: "center",
         }}
       >
         <TextField
@@ -51,10 +60,12 @@ const Buscador = () => {
           onChange={handleChange}
           value={searchParams.get("busquedaUsuario")}
           sx={{
-            width:{
-              xs:"350px",
-              sm:"450px",
-              md:"600px"}}}
+            width: {
+              xs: "350px",
+              sm: "450px",
+              md: "600px",
+            },
+          }}
         />
 
         <Box
@@ -63,8 +74,8 @@ const Buscador = () => {
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "center",
-            alignItems: "center", 
-            }}
+            alignItems: "center",
+          }}
         >
           {peliculas &&
             peliculas.map((pelicula) => {

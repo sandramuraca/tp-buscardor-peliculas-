@@ -5,7 +5,11 @@ import { Button } from "@mui/material";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import Typography from "@mui/material/Typography";
-import { colorPrimario } from "../auxiliares/Auxiliares";
+import {
+  colorPrimario,
+  colorTipografiaPrimario,
+  tipografiaPrincipal,
+} from "../auxiliares/Auxiliares";
 import IconButton from "@mui/material/IconButton";
 
 //esta estructura se reutiliza en los componentes "Populares" y "Ultimos Lanzamientos" ya que son iguales
@@ -26,13 +30,20 @@ const EstructuraPeliculasNuevasYPopulares = ({
         flexWrap: "wrap",
         flexDirection: "column",
         justifyContent: "center",
+        color: colorTipografiaPrimario,
       }}
     >
       <Typography
         variant="h4"
         gutterBottom
         component="div"
-        sx={{ display: "flex", justifyContent: "center", marginTop: "60px" }}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "60px",
+          fontFamily: tipografiaPrincipal,
+          fontWeight: "600",
+        }}
       >
         {tituloSeccion}
       </Typography>
@@ -69,7 +80,12 @@ const EstructuraPeliculasNuevasYPopulares = ({
           <ArrowBackIosNewOutlinedIcon />
         </IconButton>
 
-        <Typography variant="h6" gutterBottom component="div" sx={{ m: 2 }}>
+        <Typography
+          variant="h6"
+          gutterBottom
+          component="div"
+          sx={{ m: 2, fontFamily: tipografiaPrincipal }}
+        >
           Pagina {pagina}
         </Typography>
 
@@ -77,7 +93,9 @@ const EstructuraPeliculasNuevasYPopulares = ({
           sx={{ m: 2, bgcolor: colorPrimario }}
           onClick={clickBotonPagSiguiente}
         >
-          <ArrowForwardIosOutlinedIcon />
+          <ArrowForwardIosOutlinedIcon
+            sx={{ color: colorTipografiaPrimario }}
+          />
         </IconButton>
       </Box>
     </Box>

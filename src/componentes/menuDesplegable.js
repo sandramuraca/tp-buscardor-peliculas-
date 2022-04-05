@@ -1,11 +1,11 @@
 import * as React from "react";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { IconButton } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import {
-  colorPrimario,
+  tipografiaPrincipal,
   colorTipografiaPrimario,
 } from "../auxiliares/Auxiliares";
 
@@ -20,7 +20,7 @@ const MenuDesplegable = () => {
   };
 
   return (
-    <div>
+    <Box>
       <IconButton
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
@@ -28,7 +28,7 @@ const MenuDesplegable = () => {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        <MenuIcon />
+        <MenuIcon sx={{ color: colorTipografiaPrimario }} />
       </IconButton>
       <Menu
         id="basic-menu"
@@ -40,30 +40,58 @@ const MenuDesplegable = () => {
         }}
       >
         <MenuItem onClick={handleClose}>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              fontFamily: tipografiaPrincipal,
+              fontWeight: "600",
+            }}
+          >
             Home
           </Link>
         </MenuItem>
 
         <MenuItem onClick={handleClose}>
-          <Link to="/ultimos-lanzamientos" style={{ textDecoration: "none" }}>
+          <Link
+            to="/ultimos-lanzamientos"
+            style={{
+              textDecoration: "none",
+              fontFamily: tipografiaPrincipal,
+              fontWeight: "600",
+            }}
+          >
             Ultimos Lanzamientos
           </Link>
         </MenuItem>
 
         <MenuItem onClick={handleClose}>
-          <Link to="/populares" style={{ textDecoration: "none" }}>
+          <Link
+            to="/populares"
+            style={{
+              textDecoration: "none",
+              fontFamily: tipografiaPrincipal,
+              fontWeight: "600",
+            }}
+          >
             Populares
           </Link>
         </MenuItem>
 
         <MenuItem onClick={handleClose}>
-          <Link to="/buscar" style={{ textDecoration: "none" }}>
+          <Link
+            to="/buscar"
+            style={{
+              textDecoration: "none",
+              fontFamily: tipografiaPrincipal,
+              fontWeight: "600",
+            }}
+          >
             Buscar
           </Link>
         </MenuItem>
       </Menu>
-    </div>
+    </Box>
   );
 };
 

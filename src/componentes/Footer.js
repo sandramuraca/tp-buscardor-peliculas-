@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import {
   colorPrimario,
   colorTipografiaPrimario,
+  tipografiaPrincipal,
 } from "../auxiliares/Auxiliares";
 
 const Footer = () => {
@@ -22,15 +23,19 @@ const Footer = () => {
         position: "absolute",
         bottom: 0,
         width: "100%",
-       }}
+      }}
     >
       <Typography
         variant="subtitle1"
         gutterBottom
         component="div"
-        sx={{ color: colorTipografiaPrimario }}
+        sx={{
+          color: colorTipografiaPrimario,
+          fontFamily: tipografiaPrincipal,
+          mt: 1,
+        }}
       >
-        Hecho con Amor por Sandra - 2022
+        Hecho por Sandra - 2022
       </Typography>
 
       <IconButton
@@ -38,7 +43,7 @@ const Footer = () => {
         href="https://www.linkedin.com/in/sandra-muraca-13a76146/"
         sx={{ color: colorTipografiaPrimario }}
       >
-        <LinkedInIcon fontSize="large" />
+        <LinkedInIcon fontSize="medium" />
       </IconButton>
 
       <IconButton
@@ -46,7 +51,7 @@ const Footer = () => {
         href="mailto:sandramuraca@gmail.com"
         sx={{ color: colorTipografiaPrimario }}
       >
-        <MailIcon fontSize="large" />
+        <MailIcon fontSize="medium" />
       </IconButton>
 
       <IconButton
@@ -54,7 +59,7 @@ const Footer = () => {
         href="https://github.com/sandramuraca"
         sx={{ color: colorTipografiaPrimario }}
       >
-        <GitHubIcon fontSize="large" />
+        <GitHubIcon fontSize="medium" />
       </IconButton>
     </Box>
   );
