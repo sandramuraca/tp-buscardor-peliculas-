@@ -129,6 +129,7 @@ const DetallePelicula = () => {
           {contenidoDetalle.genres &&
             contenidoDetalle.genres.map((genero) => (
               <Chip
+                key={genero.id}
                 icon={<MovieCreationIcon />}
                 label={genero.name}
                 sx={{
