@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import {
   colorPrimario,
   colorTipografiaPrimario,
+  tipografiaPrincipal,
 } from "../auxiliares/Auxiliares";
 
 const Footer = () => {
@@ -28,9 +29,13 @@ const Footer = () => {
         variant="subtitle1"
         gutterBottom
         component="div"
-        sx={{ color: colorTipografiaPrimario, mt: 1 }}
+        sx={{
+          color: colorTipografiaPrimario,
+          fontFamily: tipografiaPrincipal,
+          mt: 1,
+        }}
       >
-        Hecho con Amor por Sandra - 2022
+        Hecho por Sandra - 2022
       </Typography>
 
       <IconButton

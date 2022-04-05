@@ -8,7 +8,11 @@ import Divider from "@mui/material/Divider";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
-import { colorPrimario, colorSecundario } from "../auxiliares/Auxiliares";
+import {
+  colorPrimario,
+  colorSecundario,
+  tipografiaPrincipal,
+} from "../auxiliares/Auxiliares";
 import { IconButton } from "@mui/material";
 
 //Las props de este comonente estan definidas en el map que estoy haciendo en el componente "Listados", alli le estoy pasando los valores
@@ -38,7 +42,10 @@ const ItemListadoPelicula = ({ tituloItem, imagenItem, linkIcono }) => {
           <ListItemAvatar>
             <Avatar alt="poster pelicula" src={imagenItem} />
           </ListItemAvatar>
-          <ListItemText primary={tituloItem} />
+          <ListItemText
+            primary={tituloItem}
+            sx={{ fontFamily: tipografiaPrincipal }}
+          />
           <Link to={linkIcono}>
             <IconButton style={{ color: colorPrimario }}>
               <RemoveRedEyeIcon />

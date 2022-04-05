@@ -7,6 +7,7 @@ import {
   baseUrl,
   apiKey,
   colorTipografiaPrimario,
+  tipografiaPrincipal,
 } from "../auxiliares/Auxiliares";
 
 //Fetch a la api, en la prop `urlListado` le estoy pasando el endpoint al que quiero que vaya a buscar la información, por que los listados son 2 uno de "Peliculas Populares" que apunta al end point `popular` y otro "Mejor Puntuadas" que apunta a `top_rated`, tambien le estoy pasando como prop `tituloListado` que define el texto del div que esta sobre el listado de los item de cada pelicula, los valores de estas props los estoy pasando en el componente Main. donde estoy llamando estos componentes.
@@ -36,9 +37,11 @@ const Listados = ({ tituloListado, urlListado }) => {
             bgcolor: colorPrimario,
             color: colorTipografiaPrimario,
             p: 3,
+            fontFamily: tipografiaPrincipal,
+            fontWeight: "600",
             fontSize: {
               xs: "18px",
-              sm: "20px",
+              sm: "22px",
             },
           }}
           variant="h5"

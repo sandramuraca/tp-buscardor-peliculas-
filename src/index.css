@@ -1,17 +1,21 @@
-
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-#root{
-position: relative;
-min-height: 100vh;
-padding-bottom: 100px;
+#root {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
 }
 
-body{
-    background: rgb(142,21,25);
-background: radial-gradient(circle, rgba(142,21,25,1) 23%, rgba(80,73,73,1) 78%);
+body {
+    background: rgb(255,221,153);
+    background: radial-gradient(circle, rgba(255,221,153,1) 21%, rgba(124,116,116,1) 95%);
 }
+
+.css-6hp17o-MuiList-root-MuiMenu-list{
+    background-color: #FEF5EC;
+}
+

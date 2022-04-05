@@ -41,6 +41,7 @@ const Buscador = () => {
         justifyContent: "center",
         alignItems: "center",
         marginTop: "60px",
+        paddin: "20px",
       }}
     >
       <Box
@@ -64,9 +65,6 @@ const Buscador = () => {
               sm: "450px",
               md: "600px",
             },
-            backgroundColor: colorSecundario,
-            borderRadius: 1,
-            p: 2,
           }}
         />
 

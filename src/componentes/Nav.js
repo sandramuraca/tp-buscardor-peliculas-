@@ -4,13 +4,12 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-
 import {
   colorPrimario,
   colorTipografiaPrimario,
+  tipografiaPrincipal,
 } from "../auxiliares/Auxiliares";
 import MenuDesplagable from "./MenuDesplegable";
-// import imagenTicket from "../assets/ticket.svg"
 import { ReactComponent as ImagenTicket } from "../assets/ticket.svg";
 
 const Nav = () => {
@@ -25,18 +24,21 @@ const Nav = () => {
           }}
         >
           <Box sx={{ display: "flex" }}>
-            <Box sx={{ width: 100, mr: 2 }}>
-              <ImagenTicket />
-            </Box>
+            <Link to="/">
+              <Box sx={{ width: 100, mr: 2 }}>
+                <ImagenTicket />
+              </Box>
+            </Link>
 
             <Typography
               sx={{
-                fontFamily: 'Poiret One',
+                fontFamily: tipografiaPrincipal,
                 color: colorTipografiaPrimario,
+                fontWeight: "600",
                 fontSize: {
                   xs: "20px",
                   sm: "24px",
-                  md: "36px",
+                  md: "38px",
                 },
                 marginTop: {
                   xs: 4,
@@ -45,7 +47,7 @@ const Nav = () => {
                 },
               }}
             >
-              Buscador de  Películas
+              Buscador de Películas
             </Typography>
           </Box>
 
@@ -64,8 +66,8 @@ const Nav = () => {
                 style={{
                   textDecoration: "none",
                   color: colorTipografiaPrimario,
-                  fontFamily: 'Poiret One',
-                  fontSize:"20px"
+                  fontFamily: tipografiaPrincipal,
+                  fontSize: "20px",
                 }}
               >
                 Home
@@ -78,8 +80,8 @@ const Nav = () => {
                 style={{
                   textDecoration: "none",
                   color: colorTipografiaPrimario,
-                  fontFamily: 'Poiret One',
-                  fontSize:"20px"
+                  fontFamily: tipografiaPrincipal,
+                  fontSize: "20px",
                 }}
               >
                 Ultimos Lanzamientos
@@ -92,8 +94,8 @@ const Nav = () => {
                 style={{
                   textDecoration: "none",
                   color: colorTipografiaPrimario,
-                  fontFamily: 'Poiret One',
-                  fontSize:"20px"
+                  fontFamily: tipografiaPrincipal,
+                  fontSize: "20px",
                 }}
               >
                 Populares
@@ -106,12 +108,11 @@ const Nav = () => {
                 style={{
                   textDecoration: "none",
                   color: colorTipografiaPrimario,
-                  fontFamily: 'Poiret One',
-                  fontSize:"20px"
+                  fontFamily: tipografiaPrincipal,
+                  fontSize: "20px",
                 }}
               >
                 Buscar
-                
               </Link>
             </Button>
           </Box>
@@ -134,4 +135,3 @@ const Nav = () => {
 };
 
 export default Nav;
-

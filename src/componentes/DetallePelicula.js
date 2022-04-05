@@ -7,6 +7,7 @@ import {
   apiKey,
   colorPrimario,
   colorTipografiaPrimario,
+  tipografiaPrincipal,
 } from "../auxiliares/Auxiliares";
 import MovieCreationIcon from "@mui/icons-material/MovieCreation";
 import { Chip } from "@mui/material";
@@ -65,12 +66,25 @@ const DetallePelicula = () => {
           variant="h4"
           gutterBottom
           component="div"
-          sx={{ mb: 1, color: colorTipografiaPrimario }}
+          sx={{
+            mb: 1,
+            color: colorTipografiaPrimario,
+            fontFamily: tipografiaPrincipal,
+            fontWeight: "600",
+          }}
         >
           {contenidoDetalle.title}
         </Typography>
 
-        <Typography variant="h4" sx={{ color: colorTipografiaPrimario, mb: 1 }}>
+        <Typography
+          variant="h4"
+          sx={{
+            color: colorTipografiaPrimario,
+            mb: 1,
+            fontFamily: tipografiaPrincipal,
+            fontWeight: "600",
+          }}
+        >
           {contenidoDetalle.release_date &&
             contenidoDetalle.release_date.slice(0, 4)}
         </Typography>
@@ -78,22 +92,36 @@ const DetallePelicula = () => {
         <Typography
           variant="h5"
           component="div"
-          sx={{ m: 1, color: colorTipografiaPrimario }}
+          sx={{
+            m: 1,
+            color: colorTipografiaPrimario,
+            fontFamily: tipografiaPrincipal,
+            fontWeight: "600",
+          }}
         >
           General:
         </Typography>
 
         <Typography
           variant="body1"
-          sx={{ mb: 2, color: colorTipografiaPrimario }}
+          sx={{
+            mb: 1,
+            color: colorTipografiaPrimario,
+            fontFamily: tipografiaPrincipal,
+            fontWeight: "600"
+          }}
         >
           {contenidoDetalle.overview}
         </Typography>
 
         <Typography
-          variant="h5"
+          variant="subtitle1"
           component="div"
-          sx={{ color: colorTipografiaPrimario }}
+          sx={{
+            color: colorTipografiaPrimario,
+            fontFamily: tipografiaPrincipal,
+            fontWeight: "600",
+          }}
         >
           Generos:
         </Typography>

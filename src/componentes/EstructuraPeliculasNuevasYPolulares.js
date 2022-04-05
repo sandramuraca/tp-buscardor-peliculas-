@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import {
   colorPrimario,
   colorTipografiaPrimario,
+  tipografiaPrincipal,
 } from "../auxiliares/Auxiliares";
 import IconButton from "@mui/material/IconButton";
 
@@ -36,7 +37,13 @@ const EstructuraPeliculasNuevasYPopulares = ({
         variant="h4"
         gutterBottom
         component="div"
-        sx={{ display: "flex", justifyContent: "center", marginTop: "60px" }}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "60px",
+          fontFamily: tipografiaPrincipal,
+          fontWeight: "600",
+        }}
       >
         {tituloSeccion}
       </Typography>
@@ -73,7 +80,12 @@ const EstructuraPeliculasNuevasYPopulares = ({
           <ArrowBackIosNewOutlinedIcon />
         </IconButton>
 
-        <Typography variant="h6" gutterBottom component="div" sx={{ m: 2 }}>
+        <Typography
+          variant="h6"
+          gutterBottom
+          component="div"
+          sx={{ m: 2, fontFamily: tipografiaPrincipal }}
+        >
           Pagina {pagina}
         </Typography>
 

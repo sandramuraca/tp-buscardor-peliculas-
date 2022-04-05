@@ -7,7 +7,11 @@ import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 import { IconButton } from "@mui/material";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
-import { colorPrimario, colorSecundario } from "../auxiliares/Auxiliares";
+import {
+  colorPrimario,
+  colorSecundario,
+  tipografiaPrincipal,
+} from "../auxiliares/Auxiliares";
 
 const Tarjeta = ({ tituloTarjeta, imagenTarjeta, linkTarjeta }) => {
   return (
@@ -39,6 +43,8 @@ const Tarjeta = ({ tituloTarjeta, imagenTarjeta, linkTarjeta }) => {
             textOverflow: "ellipsis",
             overflow: "hidden",
             textAlign: "center",
+            fontFamily: tipografiaPrincipal,
+            fontWeight: "600",
           }}
         >
           {tituloTarjeta}

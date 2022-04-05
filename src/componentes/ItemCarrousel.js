@@ -5,7 +5,7 @@ import { IconButton } from "@mui/material";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import {
   colorTipografiaPrimario,
-  colorTipografiaSecundario,
+  tipografiaPrincipal,
 } from "../auxiliares/Auxiliares";
 
 const ItemCarrousel = ({
@@ -52,7 +52,8 @@ const ItemCarrousel = ({
               lg: "25px",
               xl: "27px",
             },
-            fontFamily: 'Poiret One', fontWeight:"600"
+            fontFamily: tipografiaPrincipal,
+            fontWeight: "600",
           }}
         >
           {tituloSlider}
@@ -68,7 +69,7 @@ const ItemCarrousel = ({
               lg: "20px",
               xl: "20px",
             },
-            fontFamily: 'Poiret One'
+            fontFamily: "Poiret One",
           }}
         >
           {descripcionSlider}
