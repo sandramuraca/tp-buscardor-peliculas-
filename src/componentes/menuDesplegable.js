@@ -45,7 +45,7 @@ const MenuDesplegable = () => {
             style={{
               textDecoration: "none",
               fontFamily: tipografiaPrincipal,
-              fontWeight: "600",
+              fontWeight: "600"
             }}
           >
             Home
@@ -58,7 +58,7 @@ const MenuDesplegable = () => {
             style={{
               textDecoration: "none",
               fontFamily: tipografiaPrincipal,
-              fontWeight: "600",
+              fontWeight: "600"
             }}
           >
             Ultimos Lanzamientos
@@ -71,7 +71,7 @@ const MenuDesplegable = () => {
             style={{
               textDecoration: "none",
               fontFamily: tipografiaPrincipal,
-              fontWeight: "600",
+              fontWeight: "600"
             }}
           >
             Populares
@@ -84,7 +84,7 @@ const MenuDesplegable = () => {
             style={{
               textDecoration: "none",
               fontFamily: tipografiaPrincipal,
-              fontWeight: "600",
+              fontWeight: "600"
             }}
           >
             Buscar
