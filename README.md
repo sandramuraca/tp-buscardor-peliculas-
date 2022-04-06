@@ -25,7 +25,7 @@ El front se conecta a [The Movie Database](https://www.themoviedb.org/) a fin de
 La documentación de dicha api se puede consultar en: [Link documentación Api](https://developers.themoviedb.org/3/movies)
 
 ### Deployado con:
-- Netlify
+- Netlify: [Bucador de peliculas](https://buscador-peliculas-sandram.netlify.app/)
 
 
 Para trabajar con estos archivos en forma local, luego de clonar el repositorio, ejecutar los siguientes comandos:
