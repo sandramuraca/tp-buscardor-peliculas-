@@ -122,7 +122,7 @@ const Nav = () => {
               display: {
                 xs: "inline",
                 sm: "inline",
-                md: "none",
+                md: "none"
               },
             }}
           >
