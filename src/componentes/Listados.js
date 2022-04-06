@@ -18,7 +18,7 @@ const Listados = ({ tituloListado, urlListado }) => {
     fetch(`${baseUrl}${urlListado}?api_key=${apiKey}&language=es-AR&page=1`)
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
-  }, []);
+  }, [urlListado]);
   return (
     <Box>
       <Box

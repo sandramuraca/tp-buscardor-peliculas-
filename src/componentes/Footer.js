@@ -22,7 +22,6 @@ const Footer = () => {
         height: "100px",
         position: "absolute",
         bottom: 0,
-        width: "100%",
       }}
     >
       <Typography

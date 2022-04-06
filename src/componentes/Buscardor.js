@@ -3,10 +3,8 @@ import { TextField } from "@mui/material";
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {
-  apiKey,
-  colorSecundario,
-  colorTipografiaPrimario,
-} from "../auxiliares/Auxiliares";
+  apiKey
+ } from "../auxiliares/Auxiliares";
 import Tarjeta from "./Tarjeta";
 
 //Fetch al endpoint serch

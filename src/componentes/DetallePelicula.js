@@ -23,7 +23,7 @@ const DetallePelicula = () => {
     fetch(`${baseUrl}${params.idPelicula}?api_key=${apiKey}&language=es-ES`)
       .then((res) => res.json())
       .then((data) => setContenidoDetalle(data));
-  }, []);
+  }, [params.idPelicula]);
 
   return (
     <Box
@@ -49,7 +49,7 @@ const DetallePelicula = () => {
         }}
       >
         <img
-          src={`https://image.tmdb.org/t/p/w300/${contenidoDetalle.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w300/${contenidoDetalle.poster_path}`} alt="poster-pelicula"
         />
       </Box>
 

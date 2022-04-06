@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 import Tarjeta from "./Tarjeta";
 import * as React from "react";
-import { Button } from "@mui/material";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import Typography from "@mui/material/Typography";
