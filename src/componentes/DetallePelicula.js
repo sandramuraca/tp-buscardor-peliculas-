@@ -16,6 +16,7 @@ import { Chip } from "@mui/material";
 //con el id de cada pelicula trae de la api la informacion a mostrar en cada link
 
 const DetallePelicula = () => {
+  // detalle es un objeto, este estado deberia iniciar con un objeto vacio
   const [contenidoDetalle, setContenidoDetalle] = useState([]);
   const params = useParams();
 
@@ -48,7 +49,10 @@ const DetallePelicula = () => {
           },
         }}
       >
+
         <img
+        // este alt no le sirve de nada al usuario que depende del lector de pantalla, tenes que describir la imagen. 
+        // en este caso, "poster + tituloPelicula" funcionaria mejor
           src={`https://image.tmdb.org/t/p/w300/${contenidoDetalle.poster_path}`} alt="poster-pelicula"
         />
       </Box>

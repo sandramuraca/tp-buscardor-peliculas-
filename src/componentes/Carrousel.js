@@ -22,6 +22,8 @@ const Carrousel = () => {
         <ItemCarrousel
           key={pelicula.id}
           tituloSlider={pelicula.title}
+          // si pelicula.backdrop_path no existe, esto se va a ver roto. necesitas una imagen de resguardo
+          // imagenSlider={pelicula.backdrop_path ? `https://image.tmdb.org/t/p/original/${pelicula.backdrop_path : linkAImagenLocal}
           imagenSlider={`https://image.tmdb.org/t/p/original/${pelicula.backdrop_path}
         `}
           descripcionSlider={pelicula.overview}

@@ -74,13 +74,16 @@ const Buscador = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-        >
+          > {/*este check siempre va a dar true, porque peliculas es un array. si queres hacer el map solo cuando
+        peliculas tiene contenido, deberia ser peliculas.length && */}
           {peliculas &&
             peliculas.map((pelicula) => {
               return (
                 <Tarjeta
                   key={pelicula.id}
                   tituloTarjeta={pelicula.title}
+                 // si la api no te devuelve una imagen, esto se va a ver roto. necesitas una imagen que sirva en los casos donde 
+                // pelicula.poster_path no existe
                   imagenTarjeta={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}
                   linkTarjeta={`/detalle-pelicula/${pelicula.id}`}
                 />
