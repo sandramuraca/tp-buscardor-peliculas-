@@ -14,6 +14,9 @@ import IconButton from "@mui/material/IconButton";
 //esta estructura se reutiliza en los componentes "Populares" y "Ultimos Lanzamientos" ya que son iguales
 //se define la estructura de las tarjetas y el paginado
 
+
+// el nombre del archivo esta mal, pones "polulares" en vez de populares
+// un colega que no lee bien tu archivo puede romper toda la web poniendo el nombre incorrecto, ojo con eso!
 const EstructuraPeliculasNuevasYPopulares = ({
   tituloSeccion,
   peliculas,

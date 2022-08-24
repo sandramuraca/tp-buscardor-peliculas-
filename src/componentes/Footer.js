@@ -36,7 +36,7 @@ const Footer = () => {
       >
         Hecho por Sandra - 2022
       </Typography>
-
+{/* usa aria label siempre que tengas links con iconos y sin texto!!! */}
       <IconButton
         target="_blank"
         href="https://www.linkedin.com/in/sandra-muraca-13a76146/"

@@ -4,6 +4,7 @@ export const apiKey = "1e2f4ae9cf56f3e1c8367fb458677972" ;
 
 export const colorPrimario = "#383B53";
 
+// Se mas prolija, dejá espacio antes y despues de cada operador, en este caso el =
 export const colorSecundario= "#FEF5EC";
 
 export const colorTerciario="#4A4E6D)";
